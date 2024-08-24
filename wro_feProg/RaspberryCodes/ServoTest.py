@@ -1,0 +1,12 @@
+import pigpio
+from time import sleep
+
+pi = pigpio.pi()
+pi.set_mode(18, pigpio.OUTPUT)
+
+#1750 middle
+
+pi.set_servo_pulsewidth(18, 1200)
+sleep(1)
+pi.set_servo_pulsewidth(18, 2250)
+sleep(1)
