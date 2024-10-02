@@ -30,10 +30,10 @@ Here are the principles we decided on:
 - f
 - f
 
-Based off these fundamental ideas, we aimed to conceptualize our robot and 
-
+Based off these fundamental ideas, we aimed to conceptualize our robot.
 Next, we immediately begain the prototyping and iteration process.
 
-Here are the designs we went through
+Here are the designs we went through:
+
 
 
