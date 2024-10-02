@@ -15,22 +15,25 @@ It is vilat to understand a problem and its features in depth before planning an
 Here are the principles we decided on:
 
 **Design and Construction**
-- Simplicity and practicality, a design appropriate for the challenge, not overly complex
-- Modular, easy to assemble and disassemble
+- Compact, able to maneuver past obstacles even at high speeds
+- Simple and practical, a design appropriate for the challenge, not overly complex
+- Modular, quick and easy to assemble and disassemble
 - 
 
 **Electrical Systems**
-- f
-- f
-- f
+- Clean and orgranised, connections easy to keep track of
+- Reliable and safe, eliminate any chances of a short or circuit failure
+- 
 
 **Logic and Programming**
 - f
 - f
 - f
 
-Based off these fundamental ideas, we aimed to conceptualize our entire robot 
+Based off these fundamental ideas, we aimed to conceptualize our robot and 
 
 Next, we immediately begain the prototyping and iteration process.
+
+Here are the designs we went through
 
 
