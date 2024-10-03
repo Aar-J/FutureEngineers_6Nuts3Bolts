@@ -126,7 +126,7 @@ The motor bracket is small and simple in design, effectively performing its func
 **Camera Mount**  
 The camera mount is tall and adjustable, providing flexibility in positioning without taking up much flat space on the electronics table. It offers several customization options to fit various configurations as needed.
 
-*Steering System**  
+**Steering System**  
 The steering system is compact and straightforward, featuring a linkage-based design. It allows for the maximum possible steering angle and is highly reliable, ensuring excellent maneuverability and performance.
 
 ### Iteration process
@@ -301,13 +301,21 @@ We soldered all wire connections and mounted them on a general purpose board pro
 Every wire was labeled and color-coded, making it simple to track individual connections. This helped ensure quick identification of components during assembly and troubleshooting.
   
 Red - VCC wires
+
 Black - GND wires
+
 Purple - PWM Signal (Pin 33 or GPIO 13 on RaspberryPi)
+
 Yellow(Ultrasonic) - TRIG (Pins D3 and D7 on Nano)
+
 Blue(Ultrasonic) - ECHO (Pins D4 and D6 on Nano)
+
 Yellow(BNO055) - SDA (Pin 3 or GPIO 2 on RaspberryPi 
+
 Blue(BNO055) - SCL (Pin 5 or GPIO 3 on RaspberryPi)
+
 Blue(Button) - SIGNAL (Pin 11 or GPIO 17 on RaspberryPi)
+
 Black and White Dual Wire(SparkMax Communication) -
     
 ### **How we ensured Reliability and Safety**
@@ -389,9 +397,12 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 - It was also capable of providing our robot with a long runtime. We can run our robot for 12 minutes continuously.
 
 ### Circuit Schematic
-![WRO Future Engineers Circuit Schematic](https://github.com/user-attachments/assets/c32b433d-da13-40a0-b9b7-3afdeccd5541)
+
+![WRO Future Engineers Circuit Schematic](https://github.com/user-attachments/assets/48c6687e-7cc6-4a14-8132-a750fa895e01)
 
 ### Iteration Process
+
+
 
 ### Future Improvements
 
