@@ -133,6 +133,10 @@ The steering system is compact and straightforward, featuring a linkage-based de
 We went through 4 iterations of the design. Here's a bit about them.
 
 **Version 1**
+
+![image](https://github.com/user-attachments/assets/e290e997-33fd-44ed-8cd8-65e9d1fdec23)
+
+
 We began with a simple, open chassis design that provided ample space for future electronics and cabling, offering flexibility to adjust the layout as needed.
 
 The motor and electronics were placed centrally to maintain balance and reduce the risk of tipping during movement.
@@ -155,6 +159,10 @@ trimming excess space in the length and width of the frame to create a more comp
 
 
 **Version 2**
+
+![image](https://github.com/user-attachments/assets/f1b01775-2a7b-4f02-8e70-b24a9479e18b)
+
+
 In this iteration, we focused on making the design more compact and practical, even if it introduced some complexity.
 
 Unlike the modular and adjustable nature of Version 1, this design was fully customized for the specific requirements of the use case.
@@ -180,6 +188,10 @@ The transition from Version 1 to Version 2 marked a significant leap, making the
 
 
 **Version 3 (Abandoned)**
+
+![image](https://github.com/user-attachments/assets/25114585-e849-43af-b3c6-d246602221cb)
+
+
 In this version, we aimed to make the robot as small as possible, accommodating every element efficiently.
 
 The chassis width was reduced to 8.4 cm (down from 10 cm), significantly improving maneuverability.
@@ -205,6 +217,10 @@ This realization helped us pivot back to a more practical sizing while still foc
 
 
 **Version 4**
+
+![image](https://github.com/user-attachments/assets/daf366dc-e880-402c-9ab2-913b4e5f64ce)
+
+
 In this version, we started from scratch, incorporating lessons from previous iterations.
 
 The width remained unchanged, but the length was significantly reduced.
