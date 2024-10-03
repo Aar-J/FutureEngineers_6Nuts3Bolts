@@ -398,7 +398,8 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 ### Circuit Schematic
 
-![WRO Future Engineers Circuit Schematic](https://github.com/user-attachments/assets/48c6687e-7cc6-4a14-8132-a750fa895e01)
+![WRO Future Engineers Circuit Schematic](https://github.com/user-attachments/assets/8665c30f-97d0-4199-9b31-89a5496f39e5)
+
 
 ### Iteration Process
 
