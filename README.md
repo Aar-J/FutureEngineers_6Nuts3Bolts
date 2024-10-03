@@ -30,7 +30,7 @@ Car photos
   
   
 
-**Obstacle management**
+
 
 # Our Engineering Process
 We have used scoring criteria from the ruleblock as headings in our documentation to make it easy to navigate our repository.
@@ -118,7 +118,7 @@ We designed the robot to be broken down into three key systems: the drive system
   https://robu.in/product/hc-sr04-ultrasonic-range-finder/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG_EbtKfqxJVVLmNFvlb45ERmHGkg5ZeKwsyH0o36EEyIciF_qd2AgxoCbHIQAvD_BwE
   
 - **Xcluma USB Buck Converter**
-  https://www.xcluma.com/0.9v-5v-to-5v-600ma-usb-output-charger-step-up-power-module-mini-dc-dc-boost-converter?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrGwnZnr6HztAhUfIc8EmXiPdcBPvQhlMLFXXWHMaUp1jXnO9AhzcHORoCvscQAvD_BwE
+  https://www.xcluma.com/0.9v-5v-to-5v-600ma-usb-output-charger-step-up-power-module-mini-dc-dc-boost-convertergad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrGwnZnr6HztAhUfIc8EmXiPdcBPvQhlMLFXXWHMaUp1jXnO9AhzcHORoCvscQAvD_BwE
   
 - **2200MAh 40C 12V LiPo Battery**
   https://robokits.co.in/batteries-chargers/drone-batteries/genx-power-premium-lipo-battery/genxpower-11.1v-lipo-batteries/genx-11.1v-3s-2200mah-40c-80c-premium-lipo-lithium-polymer-battery?srsltid=AfmBOooZmP-jRWhm7kENYL9RMQMeitv-NZOYCRSYtrRlzXW_ab-SBCOg
@@ -150,60 +150,59 @@ https://robu.in/product/mc002076-terminal-block-barrier-3pos/
 ### **Reason for choice of Electrical Components**
 
 **RaspberryPi 4B**
-
-      - With its quad-core ARM Cortex-A72 64-bit 1.5GHz processor and 8GB RAM it meant that we would never face a computationl bottleneck, even with the heavy task of image processing in the obstacle         challenge.
-      - Its ability to be programmed and controlled wirelessly was a boon during the testing and debugging phase as we could run the robot almost continuously without having to detach and reattach            the cable for uploading code.
-      - Its extensive use and testing was the reason we chose to go with the RaspberryPi 4B instead of the newer RaspberryPi 5. If there was ever an issue we faced, it could most likely be solved by          searching up the problem.
+- With its quad-core ARM Cortex-A72 64-bit 1.5GHz processor and 8GB RAM it meant that we would never face a computationl bottleneck, even with the heavy task of image processing in the obstacle         challenge.
+- Its ability to be programmed and controlled wirelessly was a boon during the testing and debugging phase as we could run the robot almost continuously without having to detach and reattach            the cable for uploading code.
+- Its extensive use and testing was the reason we chose to go with the RaspberryPi 4B instead of the newer RaspberryPi 5. If there was ever an issue we faced, it could most likely be solved by          searching up the problem.
 
 **RaspberryPi Camera Module 3 with Wide Angle lens**
 
-      - We chose this mainly for its ease of integration and compatability with the RaspberryPi. 
-      - Its wide FOV (120 degrees), high resolution(12 megapixels), autofocus feature and ability to sense color in a wide range of lighting conditions allowed for efficent obstacle detection and             sensing from varying distances and angles even while moving at high speeds
+- We chose this mainly for its ease of integration and compatability with the RaspberryPi. 
+- Its wide FOV (120 degrees), high resolution(12 megapixels), autofocus feature and ability to sense color in a wide range of lighting conditions allowed for efficent obstacle detection and             sensing from varying distances and angles even while moving at high speeds
 
 **Arduino Nano**
 
-      - The use of the Arduino Nano in our robot is solely to gather data from the ultrasonic sensors and relay it to the RaspberryPi. 
-      - Hence its compactness and low power consumption was the main reason we chose to use it.
+- The use of the Arduino Nano in our robot is solely to gather data from the ultrasonic sensors and relay it to the RaspberryPi. 
+- Hence its compactness and low power consumption was the main reason we chose to use it.
 
 **BNO055 IMU**
 
-      - The BNO055 is a highly tested and reliable sensor. We had used it earlier in FTC(First Tech Challenge) as well as in a drone we made. We had also used it in Future Engineers the previous year.
-      - It has an inbuilt sensor fusion algorithm and it is easy to integrate with the RaspberryPi, communicating over I2C.
+- The BNO055 is a highly tested and reliable sensor. We had used it earlier in FTC(First Tech Challenge) as well as in a drone we made. We had also used it in Future Engineers the previous year.
+- It has an inbuilt sensor fusion algorithm and it is easy to integrate with the RaspberryPi, communicating over I2C.
 
 **MG996R Servo**
 
-      - It is a popular and reliable servo which for us is delivering about 9.5kgcm(since we are powering it through the RaspberryPi 5V pin)
-      - It is easily able to steer our robot even at high speeds.
-      - The position accuracy it is able to provide is relaible and it is able to steer at a rate of about 0.30 sec/60° degrees according to our measurements.
+- It is a popular and reliable servo which for us is delivering about 9.5kgcm(since we are powering it through the RaspberryPi 5V pin)
+- It is easily able to steer our robot even at high speeds.
+- The position accuracy it is able to provide is relaible and it is able to steer at a rate of about 0.30 sec/60° degrees according to our measurements.
 
 **RevRobotics NEO550**
 
-      - It has an absolutely phenomenal power to weight ratio (weighing only 140grams) as well as very high acceleration and has a free running speed of upto 11000 RPM. We have geared it in a 5:1             ratio. 
-      - We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
-      - It has excellent speed control and is easy to integrate and program with the SparkMax motor controller.
+- It has an absolutely phenomenal power to weight ratio (weighing only 140grams) as well as very high acceleration and has a free running speed of upto 11000 RPM. We have geared it in a 5:1             ratio. 
+- We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
+- It has excellent speed control and is easy to integrate and program with the SparkMax motor controller.
 
 **RevRobotics SparkMax Motor Controller**
 
-      - Using the NEO550 meant we would have to use this since they are complimentary pieces of hardware.
-      - Its inbuilt current limiting feature also allows for the motor to remain safe from sudden power surges.
+- Using the NEO550 meant we would have to use this since they are complimentary pieces of hardware.
+- Its inbuilt current limiting feature also allows for the motor to remain safe from sudden power surges.
 
 **HC-SRO4 Ultrasonic Sensors**
 
-      - These are widely available and a popular choice of sensor although sometimes they may be unreliable, with good programming they can be made to work just fine. 
-      - There are many resources and libraries available online to control these effectively making both programming and troubleshooting easy to do.
-      - Their accuracy is reasonable, able to provide output within a 2-3mm range of error and are also able to maintain consistency at moderate speeds, providing data every 30ms.
-      - Apart from that, its also easy to integrate
+- These are widely available and a popular choice of sensor although sometimes they may be unreliable, with good programming they can be made to work just fine. 
+- There are many resources and libraries available online to control these effectively making both programming and troubleshooting easy to do.
+- Their accuracy is reasonable, able to provide output within a 2-3mm range of error and are also able to maintain consistency at moderate speeds, providing data every 30ms.
+- Apart from that, its also easy to integrate
 
 **Xcluma USB Buck Converter**
 
-      - It was able to provide a more stable output of 5V than the buck converter we were previously using. It also made it such that we could easily power the RaspberryPi through its USBC port.
-      - It was also more compact than the previous buck.
-      - Its built in safety feature of preventing against overvoltage and overcurrent proved to be useful especially during testing.
+- It was able to provide a more stable output of 5V than the buck converter we were previously using. It also made it such that we could easily power the RaspberryPi through its USBC port.
+- It was also more compact than the previous buck.
+- Its built in safety feature of preventing against overvoltage and overcurrent proved to be useful especially during testing.
 
-**2200MAh 40C 12V LiPo Battery**
+**2200MAh 40C 12V LiPo Battery** 
 
-      - We needed a high power battery since the electronic components we used(RaspberryPi while image processing, NEO550) were quite power hungry.
-      - It was also capable of providing our robot with a long runtime. We can run our robot for 12 minutes continuously.
+- We needed a high power battery since the electronic components we used(RaspberryPi while image processing, NEO550) were quite power hungry.
+- It was also capable of providing our robot with a long runtime. We can run our robot for 12 minutes continuously.
 
       
 ### **How we achieved Clean and Organized wiring**
@@ -214,15 +213,15 @@ We used solid core wire for connections since they can be bent into shape making
 We soldered all wire connections and mounted them on a general purpose board providing a solid foundation for the wiring, minimizing loose wires and clutter.
 Every wire was labeled and color-coded, making it simple to track individual connections. This helped ensure quick identification of components during assembly and troubleshooting.
   
-      Red - VCC wires
-      Black - GND wires
-      Purple - PWM Signal (Pin 33 or GPIO 13 on RaspberryPi)
-      Yellow(Ultrasonic) - TRIG (Pins D3 and D7 on Nano)
-      Blue(Ultrasonic) - ECHO (Pins D4 and D6 on Nano)
-      Yellow(BNO055) - SDA (Pin 3 or GPIO 2 on RaspberryPi 
-      Blue(BNO055) - SCL (Pin 5 or GPIO 3 on RaspberryPi)
-      Blue(Button) - SIGNAL (Pin 11 or GPIO 17 on RaspberryPi)
-      Black and White Dual Wire(SparkMax Communication) -
+Red - VCC wires
+Black - GND wires
+Purple - PWM Signal (Pin 33 or GPIO 13 on RaspberryPi)
+Yellow(Ultrasonic) - TRIG (Pins D3 and D7 on Nano)
+Blue(Ultrasonic) - ECHO (Pins D4 and D6 on Nano)
+Yellow(BNO055) - SDA (Pin 3 or GPIO 2 on RaspberryPi 
+Blue(BNO055) - SCL (Pin 5 or GPIO 3 on RaspberryPi)
+Blue(Button) - SIGNAL (Pin 11 or GPIO 17 on RaspberryPi)
+Black and White Dual Wire(SparkMax Communication) -
     
 ### **How we ensured Reliability and Safety**
 
@@ -240,6 +239,14 @@ We soldered header pins onto the general purpose board in order to render the Ar
 The screw in nature of the barrier terminal blocks not only added a layer of security to our electrical system but also served as a way to ensure quick maintanence. The wires can be removed and reattached by simply screwing and unscrewing the terminals. 
 A similar story is for the the JST connectors, their ability to snap in place makes it easy to attach and detach the ultrasonic sensors
 We also used crimp connectors for the switch, such that we could quickly remove and replace it if necessary since we had faced issues during practice of the switch being unreliable
+
+### Circuit Schematic
+![WRO Future Engineers Circuit Schematic](https://github.com/user-attachments/assets/c32b433d-da13-40a0-b9b7-3afdeccd5541)
+
+
+
+
+**Obstacle management**
     
 
 
