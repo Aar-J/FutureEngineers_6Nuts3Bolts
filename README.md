@@ -34,9 +34,9 @@ Our Engineering Process
   - Future Improvements
   - Parts list
   
-- Acknowledgement to our mentor Sahil Gajera Sir
+Acknowledgement to our mentor Sahil Gajera Sir
 
-- Thank you to the judges
+Thank you to the judges
 
 
 
@@ -133,30 +133,102 @@ The steering system is compact and straightforward, featuring a linkage-based de
 We went through 4 iterations of the design. Here's a bit about them.
 
 **Version 1**
-We started with a simple, open chassis design that prioritized space for future electronics and cabling, giving us flexibility in adjusting the layout as needed. The motor and electronics were placed centrally to maintain balance and reduce the risk of tipping during movement. The base was intentionally kept flat and spacious to simplify assembly and allow easy access to key components. For the steering system, we initially implemented an approximate Ackermann configuration, designed to improve cornering performance by adjusting wheel angles based on turning radius. However, after evaluating the robot’s performance needs, we opted for a linkage-based steering system, which provided more straightforward control with fewer mechanical components, reducing potential points of failure.
-The bulky Limelight camera was integrated and mounted high on a custom-designed bracket to ensure optimal visibility for the robot's vision systems. Though the camera’s size was disproportionate to the robot’s compact form, we relied on it during initial tests due to its accuracy in target detection and our team's familiarity with its setup. The camera placement was also chosen to minimize interference from the robot’s body while capturing accurate visual data. 
-This design iteration allowed us to explore several key improvements for future versions, such as reducing the height of the base to lower the robot’s center of gravity and increase stability. Additionally, transitioning to a more layered architecture would improve component arrangement and allow for better separation of electronics, minimizing signal interference. We also identified the need to trim excess space, particularly in the length and width of the frame, to create a more compact and efficient design that maximized maneuverability while retaining all necessary functionality.
+We began with a simple, open chassis design that provided ample space for future electronics and cabling, offering flexibility to adjust the layout as needed.
+
+The motor and electronics were placed centrally to maintain balance and reduce the risk of tipping during movement.
+
+The flat and spacious base was designed to simplify assembly and allow easy access to key components.
+
+For the steering system, we initially used an approximate Ackermann configuration to improve cornering performance by adjusting wheel angles based on turning radius.
+
+After evaluating the robot’s performance, we switched to a linkage-based steering system, which offered more straightforward control with fewer mechanical components, minimizing potential points of failure.
+
+We integrated the bulky Limelight camera, mounting it high on a custom bracket to ensure optimal visibility for the robot's vision systems.
+
+Although the camera’s size was disproportionate to the compact robot, we relied on it for initial tests due to its accuracy in target detection and our team's familiarity with its setup.
+
+The camera placement was chosen to minimize interference from the robot's body and ensure accurate visual data capture.
+
+This design iteration allowed us to explore several improvements for future versions, including lowering the base height to reduce the robot's center of gravity and increase stability,
+transitioning to a layered architecture for better component arrangement and improved separation of electronics, minimizing signal interference, and
+trimming excess space in the length and width of the frame to create a more compact and efficient design, maximizing maneuverability without sacrificing functionality.
 
 
 **Version 2**
-From the previous iteration, we focused on making the design more compact and practical, even if it introduced a bit more complexity. Unlike the modular and adjustable nature of v1, this design was fully customized for the specific requirements of this use case. The first major decision was to align the motor with the length of the robot, significantly reducing the overall width. To achieve this, we implemented a 90-degree power transmission system using custom-designed bevel gears. These 3D-printed bevel gears, approximately 2 cm in diameter, fit seamlessly into a custom motor mount that could also house a REV Through Bore Encoder, which could measure the back wheels' rotations through its own bevel. However, we eventually decided that the encoder wasn't necessary for this iteration.
-This design also introduced a layered structure with three levels. The topmost layer was exclusively dedicated to the electronics, while the lower layers accommodated wiring, the SPARK MAX controller, and other components. Having now finalized the battery choice, the layout of the robot was partially built around it, ensuring proper space allocation and balance. The electronics board was also designed to be hot-swappable, allowing it to snap into place without the need for screws. This meant that electronics development could happen on a separate table, and the board could be quickly and easily integrated into the robot as needed.
-For the steering, we implemented a simple linkage-based system powered by the MG996R servo. This helped improve the steering control while keeping the design compact and efficient. The transformation from v1 to v2 was substantial, with the robot becoming much more space-efficient and purpose-built for this specific application, reflecting a major leap in the design approach.
+In this iteration, we focused on making the design more compact and practical, even if it introduced some complexity.
+
+Unlike the modular and adjustable nature of Version 1, this design was fully customized for the specific requirements of the use case.
+
+The first major decision was to align the motor with the length of the robot, significantly reducing the overall width.
+
+To achieve this, we implemented a 90-degree power transmission system using custom-designed, 3D-printed bevel gears (approx. 2 cm in diameter).
+
+The custom motor mount could also house a REV Through Bore Encoder to measure back wheel rotations, but we decided it wasn’t necessary for this version.
+
+We introduced a layered structure with three levels:
+
+The top layer was exclusively for the electronics.
+
+The lower layers housed wiring, the SPARK MAX controller, and other components.
+
+After finalizing the battery choice, we built the robot layout around it to ensure proper space allocation and balance.
+
+The electronics board was designed to be hot-swappable, allowing it to snap into place without screws, so electronics development could be done separately and easily integrated.
+
+We also implemented a simple linkage-based steering system, powered by the MG996R servo, improving steering control while keeping the design compact and efficient.
+The transition from Version 1 to Version 2 marked a significant leap, making the robot more space-efficient and purpose-built for the specific application.
 
 
 **Version 3 (Abandoned)**
-In this version, we pushed to make the robot as small as possible by accommodating every element in any way necessary. The width of the chassis was reduced to 8.4 cm, significantly improving maneuverability and marking a substantial reduction from the previous 10 cm. The overall height was also reduced, and though ground clearance wasn’t a key priority, it was slightly improved, which is worth considering when incorporating ground-facing sensors. Early in the design process, however, we realized that shrinking some dimensions came with trade-offs. The maximum turning angle of the steering wheels was reduced by about 10-15 degrees on either side, and the servo had to be placed in an unconventional manner. To address these issues, we explored the idea of adding more layers to the design.
-Based on rough estimates, we anticipated needing 5 to 6 layers, each sloping and connecting to the other, as shown in the incomplete design. This would allow for better distribution of components while keeping the robot compact. Despite our efforts, feedback from testing the v2 bot indicated that width wasn’t a major concern, and while this version could have been aesthetically sleeker, it presented too many complications. The layered structure led to challenges in both assembly and component access, making the design overly complex for our needs.
-From this iteration, we learned that the current dimensions were already quite optimized, and future designs would likely stay within a tolerance of ±2-3 cm. We also discovered that making the robot smaller only worsened the wiring complexity, as the compact spaces made routing cables and connections more difficult to manage. This realization helped us pivot back to more practical sizing while still focusing on overall efficiency.
+In this version, we aimed to make the robot as small as possible, accommodating every element efficiently.
+
+The chassis width was reduced to 8.4 cm (down from 10 cm), significantly improving maneuverability.
+
+The overall height was also reduced, and although ground clearance wasn’t a priority, it was slightly improved for potential ground-facing sensors.
+
+Early in the design, we realized shrinking the dimensions came with trade-offs.
+
+The maximum turning angle of the steering wheels was reduced by 10-15 degrees on either side.
+
+The servo had to be placed in an unconventional manner.
+
+To address these issues, we explored adding 5-6 layers to the design to distribute components while keeping the robot compact.
+
+Despite our efforts, feedback from testing Version 2 showed that width wasn’t a major concern, and while this version was sleeker, it presented too many complications.
+The layered structure created challenges in both assembly and component access, making the design overly complex.
+
+From this iteration, we learned that the current dimensions were already optimized, and future designs would likely stay within a tolerance of ±2-3 cm.
+
+Making the robot smaller worsened the wiring complexity, as the compact spaces made routing cables and connections more difficult to manage.
+
+This realization helped us pivot back to a more practical sizing while still focusing on overall efficiency.
 
 
 **Version 4**
-In this version, we started afresh, incorporating all the lessons learned from previous iterations. While the width remained unchanged, the length saw a significant reduction. We transitioned from the 20:1 UltraPlanetary gearbox system to a 5:1 system. This change, coupled with a few steering modifications, allowed us to shorten the robot to its most compact form yet. The electronics table at the top was made wider, extending beyond the physical chassis but still within the overall dimensional constraints. However, we moved away from the hot-swappable design for the top plate, as the snap-on system weakened after repeated use and occasionally broke off.
-The bottom plate was refined to remove any unnecessary parts and even featured our team name cut out for weight reduction and aesthetic purposes. The middle plate now carries the bulk of the structural load, effectively becoming the backbone of the robot. We increased the thickness of both the bottom and middle plates from 3mm to 4mm, greatly improving their strength and eliminating any flex.
-The most significant improvement came in the drive subsystem. During test runs, we noticed vibrations when the robot turned, likely due to the absence of a differential system. Without it, the inside and outside wheels rotated at the same speed, creating a large mismatch in ideal rotation speeds. To mitigate this, we reduced the gap between the wheels, which helped minimize vibration in a simple and effective manner.
-Another major upgrade was in the bevel gears. We increased their size from 2 cm to 3 cm in diameter. While this change may seem minor, it resulted in a substantial performance boost. The larger bevel gears were much stronger, eliminating the wear-and-tear issues we experienced with the smaller ones. Previously, we had to replace the smaller gears after every five runs, but with the new design, we no longer needed frequent replacements.
+In this version, we started from scratch, incorporating lessons from previous iterations.
 
-Overall, this design marked the culmination of all our ideas and refinements. We feel confident that this iteration is the most optimized and efficient version yet, reflecting both our technical improvements and practical design choices.
+The width remained unchanged, but the length was significantly reduced.
+
+We transitioned from a 20:1 UltraPlanetary gearbox to a 5:1 system, which, along with steering modifications, allowed us to achieve our most compact design yet.
+
+The electronics table at the top was made wider, extending beyond the chassis but staying within dimensional constraints.
+
+We moved away from the hot-swappable top plate design, as the snap-on system weakened after repeated use and occasionally broke off.
+
+The bottom plate was refined to remove unnecessary parts and featured our team name cut out for weight reduction and aesthetic appeal.
+
+The middle plate now carried the bulk of the structural load, becoming the backbone of the robot. The thickness of both the bottom and middle plates was increased from 3mm to 4mm, greatly improving strength and eliminating flex.
+
+A key improvement was in the drive subsystem, during test runs, we noticed vibrations while turning, due to the lack of a differential system.
+The inside and outside wheels rotated at the same speed, causing a mismatch.
+To fix this, we reduced the gap between the wheels, minimizing vibration in a simple manner.
+We also upgraded the bevel gears, increasing their size from 2 cm to 3 cm in diameter.
+This made the gears much stronger, eliminating wear-and-tear issues.
+
+Previously, we had to replace the smaller gears after every five runs, but with the new design, frequent replacements were no longer necessary.
+
+Overall, this design marked the culmination of all our ideas and refinements, making it the most optimized and efficient version yet, combining technical improvements with practical design choices.
+
 
 **Key Differences between the versions**
 | **Aspect**                   | **Version 1** | **Version 2** | **Version 3 (Abandoned)** | **Version 4** |
@@ -174,7 +246,7 @@ Overall, this design marked the culmination of all our ideas and refinements. We
 | **Testing and Feedback**      | Preliminary tests with bulky camera setup | Refined design with specific components, partial finalization | Abandoned due to complexity, compromised steering, and wiring issues | Final optimized version, most refined in terms of design and performance |
 | **Complexity**                | Simple and flexible | More complex but optimized for purpose | Extremely complex and impractical | Balanced complexity with practical refinements |
 
-### Assembly Instructions
+
 
 ### Future Improvements
 If we had more time, we would likely explore a more complex design that branches off from the v3 concepts while integrating elements from the v4 robot. This hybrid approach would allow us to capitalize on the strengths of both iterations, leading to an ideal robot that embodies our design philosophy. By merging the compact efficiency and structural integrity of v3 with the advanced features and refined functionality of v4, we could create a robot that maximizes performance while enhancing maneuverability and adaptability. This exploration could involve developing a more sophisticated drive system or experimenting with innovative materials and configurations to further reduce weight and improve responsiveness. Ultimately, this integration of ideas would help us push the boundaries of our design capabilities and achieve our vision of an optimal robot tailored to our specific needs.
@@ -371,8 +443,10 @@ https://robu.in/product/mc002076-terminal-block-barrier-3pos/
 
 
 
-**Obstacle management**
-    
+## **Obstacle management**
+
+
+# Acno
 
 
 
