@@ -76,9 +76,18 @@ Here's how we went about achieving our target
 - Lock nuts
 
 **How we made it Compact**
+
+We began by visualizing how all the components could fit closely together, and we built around that idea. The space between parts is minimal, but we made sure it wouldn’t create any issues in performance or accessibility.
+The overall length of the robot is limited by key components like the NEO 550 motor, bevel gears, and the steering system, while the width is determined by the size of the Spark MAX, ultrasonic sensor, servo, and battery. By carefully balancing the length and width, we were able to create a robot that is compact yet fully functional. The width isn't constrained by any specific part, it’s simply as wide as necessary to accommodate the essential components.
+
 **How we ensured simplicity and practicality**
+
+From the beginning, we adopted a mindset of keeping things simple. We've learned that complexity can quickly lead to chaos, especially when time is tight or you're troubleshooting under pressure. By focusing on simplicity, we narrowed our options and only considered ideas that were practical and easy to implement. If a solution met our goals without adding unnecessary complications, we ran with it. Simplicity also naturally led to practicality because fewer moving parts meant fewer things to go wrong, and every design choice was intentional and straightforward.
+
 **How we made it Modular**
 
+The entire robot is based around three main plates, with each subassembly between them individually 3D printed. This modular design gives us a lot of flexibility. If something goes wrong with a specific part, we don’t need to overhaul the entire system—just swap out the problem area. It makes troubleshooting and maintenance much quicker and less stressful.
+We designed the robot to be broken down into three key systems: the drive system, the steering system, and the electronics assembly. Any part that doesn’t fall into one of these categories is mostly there to provide structural integrity and support to the main components. For instance, the bottom plate doesn’t serve any critical function other than strengthening the overall structure. This modular approach ensures that our robot remains easy to work on, upgrade, and maintain, which is key for long-term reliability.
 
 
 ## Electrical Components list:
@@ -86,7 +95,7 @@ Here's how we went about achieving our target
 - Raspberry Pi Camera Module 3 with Wide Angle Lens https://robu.in/product/raspberry-pi-camera-module-3-wide/
 - Arduino Nano
 - BNO055 IMU
-- MG995 Servo
+- MG996R Servo
 - RevRobotics NEO550 https://www.revrobotics.com/rev-21-1651/
 - RevRobotics SparkMax Motor Controller
 - HC-SR04 Ultrasonic Sensors
@@ -118,7 +127,34 @@ Arduino Nano
 
 BNO055 IMU
       - The BNO055 is a highly tested and reliable sensor. We had used it earlier in FTC(First Tech Challenge) as well as in a drone we made. We had also used it in Future Engineers the previous year.
-      - It has an inbuilt sensor fusion algorithm and
+      - It has an inbuilt sensor fusion algorithm and it is easy to integrate with the RaspberryPi, communicating over I2C.
+
+MG996R Servo
+      - It is a popular and reliable servo which for us is delivering about 9.5kgcm(since we are powering it through the RaspberryPi 5V pin)
+      - It is easily able to steer our robot even at high speeds.
+      - The position accuracy it is able to provide is relaible and it is able to steer at a rate of about 0.30 sec/60° degrees according to our measurements.
+
+RevRobotics NEO550
+      - It has an absolutely phenomenal power to weight ratio (weighing only 140grams) as well as very high acceleration and has a free running speed of upto 11000 RPM. We have geared it in a 5:1             ratio. 
+      - We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
+      - It has excellent speed control and is easy to integrate and program with the SparkMax motor controller.
+
+RevRobotics SparkMax Motor Controller
+      - Using the NEO550 meant we would have to use this since they are complimentary pieces of hardware.
+      - Its inbuilt current limiting feature also allows for the motor to remain safe from sudden power surges.
+
+HC-SRO4 Ultrasonic Sensors
+      - These are widely available and a popular choice of sensor although sometimes they may be unreliable, with good programming they can be made to work just fine. 
+      - There are many resources and libraries available online to control these effectively making both programming and troubleshooting easy to do.
+      - Their accuracy is reasonable, able to provide output within a 2-3mm range of error and are also able to maintain consistency at moderate speeds, providing data every 30ms.
+      - Apart from that, its also easy to integrate
+
+Xcluma USB Buck Converter
+      - It was able to provide a more stable output of 5V than the buck we were previously using. It also made it such that we could easily power the RaspberryPi through its USBC port.
+      - it was 
+
+      
+      
 ### **How we achieved Clean and Organized wiring**
 
 To keep our wiring system easy to manage, we focused on clarity, organization and structure in all connections.
