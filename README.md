@@ -33,10 +33,10 @@ Our Engineering Process
   - Iteration Process
   - Future Improvements
   - Parts list
- 
-Acknowledgement to our mentor Sahil Gajera Sir
+  
+- Acknowledgement to our mentor Sahil Gajera Sir
 
-Thank you to the judges
+- Thank you to the judges
 
 
 
@@ -108,25 +108,26 @@ The entire robot is based around three main plates, with each subassembly betwee
 We designed the robot to be broken down into three key systems: the drive system, the steering system, and the electronics assembly. Any part that doesn’t fall into one of these categories is mostly there to provide structural integrity and support to the main components. For instance, the bottom plate doesn’t serve any critical function other than strengthening the overall structure. This modular approach ensures that our robot remains easy to work on, upgrade, and maintain, which is key for long-term reliability.
 
 ### Explanation
-**Electronics Mounting Plate**
-
-The electronics table offers ample space for organizing wiring effectively. 
-It is spacious enough to accommodate most of the wiring, ensuring everything remains well-organized and accessible for easy maintenance and troubleshooting.
+**Electronics Mounting Plate** 
+The electronics table offers ample space for organizing wiring effectively. It is spacious enough to accommodate most of the wiring, ensuring everything remains well-organized and accessible for easy maintenance and troubleshooting.
 
 **Top Plate**
 The top plate is the strongest and most robust part of the robot, serving as its backbone. It plays a vital role in every subsystem, providing structural integrity and supporting the entire design.
 
-**Bevel Gears**
+**Bottom Plate**
+The bottom plate provides essential support and serves as a key aesthetic feature for the robot. It protects the belly of the robot from potential damage while also adding significant structural integrity to the overall foundation. By ensuring a strong base, the bottom plate helps maintain the robot's durability and stability during operation. Its role in reinforcing the lower framework makes it a critical component of the robot's design.
+
+**Bevel Gears**  
 The bevel gears are designed for durability, featuring a large diameter and sizable teeth. This design ensures they wear out more slowly, making them reliable and long-lasting components of the drive system.
 
-**Motor Bracket**
+**Motor Bracket**  
 The motor bracket is small and simple in design, effectively performing its function without occupying excessive space. It optimizes space utilization while ensuring the motor is securely mounted.
 
-**Camera Mount**
-The camera mount is tall and adjustable, providing flexibility in its positioning without taking up much flat space on the electronics table. It offers several customization options to fit various configurations as needed.
+**Camera Mount**  
+The camera mount is tall and adjustable, providing flexibility in positioning without taking up much flat space on the electronics table. It offers several customization options to fit various configurations as needed.
 
-**Steering System**
-The steering system is compact and simple, featuring a linkage-based design. It allows for the maximum possible steering angle and is highly reliable, ensuring excellent performance in maneuverability.
+*Steering System**  
+The steering system is compact and straightforward, featuring a linkage-based design. It allows for the maximum possible steering angle and is highly reliable, ensuring excellent maneuverability and performance.
 
 ### Iteration process
 We went through 4 iterations of the design. Here's a bit about them.
@@ -164,18 +165,14 @@ Overall, this design marked the culmination of all our ideas and refinements. We
 | **Motor Placement**           | Central for balance | Aligned with the length, bevel gears for 90-degree power transmission | Motor placement compromised for size | Same as v2, with more robust gearing system |
 | **Steering System**           | Approximate Ackermann, later switched to linkage-based | Linkage-based, powered by MG996R servo | Reduced turning angle due to compactness | Linkage-based with further steering modifications to reduce size |
 | **Electronics Layout**        | Spacious, simple arrangement on a general-purpose board | Layered design with three levels, hot-swappable electronics board | 5-6 layers proposed, overly complex, compact | Wider electronics table, no hot-swappable design due to durability issues |
-| **Camera System**             | Limelight camera, large and mounted high for optimal visibility | Not specifically mentioned | Not specifically mentioned | Not specifically mentioned |
+| **Camera System**             | Limelight camera, large and mounted high for optimal visibility |Limelight Camera Swapped for RaspberryPi Camera| Not specifically mentioned | Not specifically mentioned |
 | **Frame Dimensions**          | Spacious, flexible for adjustments | Narrower (due to motor alignment) and more layered | Extremely compact (8.4 cm width), but overly complex | Reduced length, width unchanged; optimized overall dimensions |
-| **Gearbox**                   | Not specified | 20:1 UltraPlanetary gearbox | Not specified | Switched to 5:1 UltraPlanetary gearbox for compactness |
+| **Gearbox**                   |20:1 UltraPlanetary gearbox |Same as v1 | Same as v2 | Switched to 5:1 UltraPlanetary gearbox for compactness and speed|
 | **Bevel Gears**               | Not used | 2 cm diameter, custom 3D-printed | Same as v2, but layering increased difficulty | 3 cm diameter, stronger, reduced wear and tear |
-| **Material Strength**         | Standard 3 mm plates | Standard 3 mm plates | Not specifically addressed | Plates increased from 3 mm to 4 mm for improved structural strength |
+| **Material Strength**         | Standard 3 mm plates | Standard 3 mm plates | Same as v2 | Plates increased from 3 mm to 4 mm for improved structural strength |
 | **Vibration Control**         | Not addressed | No differential system, resulting in vibrations | Not addressed | Reduced wheel gap to minimize vibrations during turns |
-| **Aesthetic Modifications**   | None | None | None | Team name cut out on the bottom plate for weight reduction and design |
 | **Testing and Feedback**      | Preliminary tests with bulky camera setup | Refined design with specific components, partial finalization | Abandoned due to complexity, compromised steering, and wiring issues | Final optimized version, most refined in terms of design and performance |
 | **Complexity**                | Simple and flexible | More complex but optimized for purpose | Extremely complex and impractical | Balanced complexity with practical refinements |
-
-
-
 
 ### Assembly Instructions
 
@@ -185,19 +182,25 @@ If we had more time, we would likely explore a more complex design that branches
 
 ### Hardware Components list:
 - Rev Duo 60mm Traction Wheels https://www.revrobotics.com/DUO-Traction-Wheels/
-- Chassis
-  - Top plate
-  - Bottom Plate
-- Steering Mechanism
-  - Linkage
-  - Left Front
-  - Right Front
-- Bevel Gears
-- Motor Bracket
-- Electronics Mount
-- 
-- M3 Screws
-- Lock nuts
+- **Chassis**
+  - **Top plate**
+  - **Bottom Plate**
+- **Steering Mechanism**
+  - **Linkage**
+  - **Left Front**
+  - **Right Front**
+- **Bevel Gears**
+- **Motor Bracket**
+- **Electronics Mount**
+- **Camera Mount**
+- **1 x Servo horn**
+- **20 x m3 10mm bolts**
+- **2 x m3 30mm bolts**
+- **16 x m3 nyloc nuts**
+- **1 x 75mm shaft**
+- **1 x 20mm shaft**
+- **2 x shaft collars**
+- **4 x 60mm rev wheels**
 
 ## **Power and sense management**
 
