@@ -404,6 +404,20 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 ### Iteration Process
 
+**Version 1**
+
+This was a prototyping version, simply to test the circuit and have a robot capable of moving while we worked on a better version.
+It consisted of the Electronics mounted on a cardboard plate and the use of a prototyping board fundamentally composed on 4 buck converters. There were wires going everywhere, even outisde the perimeter of our bot. However, this was only ever meant to be a prototyping version. 
+
+![Carboard Plate (1)](https://github.com/user-attachments/assets/1c7484e9-9b19-4533-9836-e13fd27eb4cd)
+
+**Version 2**
+This was also merely a prototyping version intended on having a functional robot to program. The differe
+
+![More well positioned Cardboard Plate](https://github.com/user-attachments/assets/200de56e-0422-4285-8648-1b30d4dbfae6)
+
+
+
 
 
 ### Future Improvements
