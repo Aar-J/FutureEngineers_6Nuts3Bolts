@@ -94,43 +94,59 @@ We designed the robot to be broken down into three key systems: the drive system
 ### Electrical Components list:
 - **RaspberryPi 4B**
   https://robu.in/product/raspberry-pi-4-model-b-with-4-gb-ram/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG0_X9z0IWl0GMOeDR9xo95aErRhqwMOBMpljfzc0rZcln-PEJ_WPNhoCWP4QAvD_BwE
+  
 - **Raspberry Pi Camera Module 3 with Wide Angle Lens**
    https://robu.in/product/raspberry-pi-camera-module-3-wide/
+  
 - **Arduino Nano**
   https://robu.in/product/arduino-nano-board-r3-with-ch340-chip-wo-usb-cable-solderedarduino-nano-r3-wo-usb-cable-soldered/?        
   gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG2RzmpzoTJQA5ThT4OKJQDOLGdDu_CcdCzMTJhiYnkzNB_LoFYl8ChoCa28QAvD_BwE
+  
 - **BNO055 IMU**
   https://evelta.com/7semi-bno055-9-dof-absolute-orientation-sensor-breakout-i2c-qwiic/?utm_campaign=PMax_7Semi_Brand&utm_source=google&utm_medium=cpc&utm_matchtype=&utm_term=&adgroupid=&gc_id=21448253640&h_ad_id=&gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG9t5I-iOiD0RwKp8cLeIIelVS6iZASKIyd3kG00_usR5Ykl3bWthoxoCxlUQAvD_BwE
+  
 - **MG996R Servo**
   https://robu.in/product/towerpro-mg996r-digital-high-torque-servo-motor/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG5k2qGe0ascHdXMnf665lYrTuYaYGQ-buKZOUEIb1roxZUKqwj_jnBoCRrkQAvD_BwE
+  
 - **RevRobotics NEO550**
   https://www.revrobotics.com/rev-21-1651/
+  
 - **RevRobotics SparkMax Motor Controller**
   https://www.revrobotics.com/rev-11-2158/
+  
 - **HC-SR04 Ultrasonic Sensors**
   https://robu.in/product/hc-sr04-ultrasonic-range-finder/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG_EbtKfqxJVVLmNFvlb45ERmHGkg5ZeKwsyH0o36EEyIciF_qd2AgxoCbHIQAvD_BwE
+  
 - **Xcluma USB Buck Converter**
   https://www.xcluma.com/0.9v-5v-to-5v-600ma-usb-output-charger-step-up-power-module-mini-dc-dc-boost-converter?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrGwnZnr6HztAhUfIc8EmXiPdcBPvQhlMLFXXWHMaUp1jXnO9AhzcHORoCvscQAvD_BwE
+  
 - **2200MAh 40C 12V LiPo Battery**
   https://robokits.co.in/batteries-chargers/drone-batteries/genx-power-premium-lipo-battery/genxpower-11.1v-lipo-batteries/genx-11.1v-3s-2200mah-40c-80c-premium-lipo-lithium-polymer-battery?srsltid=AfmBOooZmP-jRWhm7kENYL9RMQMeitv-NZOYCRSYtrRlzXW_ab-SBCOg
+  
 - **Switch**
   https://robu.in/product/kcd5-101-mini-rocker-switch-2pinon-off/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG3xTcQJe-xwuf-VgMbq_GhRlw2xvdMJ_hcsEn1JaMIH2xizj02XIUBoC27gQAvD_BwE
+  
 - **Pushbutton**
-  https://robu.in/product/6x6x5mm-tactile-push-button-switch-pack-of-20/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG_UgvXeQhdzT8mkMVqof7YX3YhfWvQfaMlhG7Tnu8WwdNZhUlYFnshoCCbgQAvD_BwE
-- **Barrier Block Screw Terminals**
-  https://robu.in/product/mc002076-terminal-block-barrier-3pos/
+https://robu.in/product/mc002076-terminal-block-barrier-3pos/
+  
 - **General Purpose Board**
   https://robu.in/product/8-x-12-cm-universal-pcb-prototype-board-single-sided-2-54mm-hole-pitch/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG-9HyNzYSmtE-KpMW2ga34XkH7SE7PdmuRkKmwuoX7r9kTfUCxHYYBoCkWEQAvD_BwE
+  
 - **JST Connectors**
   https://robu.in/product/4-pin-jst-xh-2-54mm-pitch-plug-and-socket-with-cable-5-pcs/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG3ThNvwgApN0K5ayPAHMNajE53OX_YYqjVMQp1rAzSzAncURmy8bChoC4KEQAvD_BwE
+  
 - **Jumper Wires**
   https://www.amazon.in/Electrobot-Jumper-Wires-120-Pieces/dp/B071VQLQQQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1P9ZW4IHIOLEJ
+  
 - **Solid Core Wires**
-  https://robocraze.com/products/single-stranded-hook-up-wires-1m-each-5-colors?variant=40193905590425&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=google&utm_medium=cpc&utm_campaign=BL+%7C+Pmax+%7C+Feed+Only+%7C+RoboCraze+%7C+Electronic+Components+%7C+31%2F05&utm_source=googleads&utm_medium=ppc&utm_campaign=21337209786&utm_content=_&utm_term=&campaignid=21337209786&adgroupid=&campaign=21337209786&gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG3u9fNBU5QDhYD9Ucx_2wW2NyCeETx7FvXPxnjWEPRTooklT7cg9MhoCnbUQAvD_BwE
+  https://robocraze.com/products/single-stranded-hook-up-wires-1m-each-5-colorsvariant=40193905590425&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=google&utm_medium=cpc&utm_campaign=BL+%7C+Pmax+%7C+Feed+Only+%7C+RoboCraze+%7C+Electronic+Components+%7C+31%2F05&utm_source=googleads&utm_medium=ppc&utm_campaign=21337209786&utm_content=_&utm_term=&campaignid=21337209786&adgroupid=&campaign=21337209786&gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrG3u9fNBU5QDhYD9Ucx_2wW2NyCeETx7FvXPxnjWEPRTooklT7cg9MhoCnbUQAvD_BwE
+  
 - **XT60 Connectors**
   https://robu.in/product/amass-xt60-male-connector-xt60-m-g-y/?gad_source=1&gclid=CjwKCAjwgfm3BhBeEiwAFfxrGzPYPHGdOfB5ZcnJi-e7oqUFiNBjxtAciUPGctwt8o8nlXeyrNpHuBoCN7wQAvD_BwE
+  
 - **Crimp Connectors**
-https://www.tsktech.in/product/6-3mm-female-spade-connector-with-insulator-boot-crimp-terminal-thimbles-no-color-choice-pack-of-10nos/
+  https://www.tsktech.in/product/6-3mm-female-spade-connector-with-insulator-boot-crimp-terminal-thimbles-no-color-choice-pack-of-10nos/
+  
 ### **Reason for choice of Electrical Components**
 
 **RaspberryPi 4B**
