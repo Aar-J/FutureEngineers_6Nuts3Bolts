@@ -393,7 +393,7 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 **MG996R Servo**
 
-![Untitled design (11)](https://github.com/user-attachments/assets/5aa4f6f9-b4ba-4ebc-bc07-d1b644571168)
+![Untitled design (17)](https://github.com/user-attachments/assets/4b56777f-e333-4446-bb65-d5e678c8a31b)
 
 - It is a popular and reliable servo which for us is delivering about 9.5kgcm(since we are powering it through the RaspberryPi 5V pin)
 - It is easily able to steer our robot even at high speeds.
@@ -410,7 +410,7 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 **RevRobotics SparkMax Motor Controller**
 
-![Untitled design (8)](https://github.com/user-attachments/assets/4ddf2347-bef1-458f-9732-62f1940eeb20)
+![Untitled design (18)](https://github.com/user-attachments/assets/f4c5dbf0-d33c-48a3-976f-3b59b8d2d880)
 
 - Using the NEO550 meant we would have to use this since they are complimentary pieces of hardware.
 - Its inbuilt current limiting feature also allows for the motor to remain safe from sudden power surges.
@@ -425,7 +425,8 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 **Xcluma USB Buck Converter**
 
-![Untitled design (10)](https://github.com/user-attachments/assets/1e6d3b3d-196f-4b8c-98e4-395b42cbf9c3)
+![Untitled design (16)](https://github.com/user-attachments/assets/976be40f-9399-4871-acec-6abb57b4bccf)
+
 
 - It was able to provide a more stable output of 5V than the buck converter we were previously using. It also made it such that we could easily power the RaspberryPi through its USBC port.
 - It was also more compact than the previous buck.
