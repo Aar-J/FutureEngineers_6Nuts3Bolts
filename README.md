@@ -56,7 +56,21 @@ Acknowledgement to our mentor Sahil Gajera Sir
 Thank you to the judges
 
 
+# Car Photos
 
+### Top View
+
+![Untitled design (41)](https://github.com/user-attachments/assets/fa3ed176-4482-46d3-966b-5a507e9104ad)
+
+### Bottom View
+
+### Front View
+
+### Back View
+
+### Left side 
+
+### Right Side
 
 # Our Engineering Process
 We have used scoring criteria from the ruleblock as headings in our documentation to make it easy to navigate our repository.
