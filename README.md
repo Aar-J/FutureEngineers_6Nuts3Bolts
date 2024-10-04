@@ -6,13 +6,13 @@ Based off of the nature of the task, we divded the industry and each took on a k
 
 **Arham**: 
 
-![Uploading WhatsApp Image 2024-10-04 at 6.19.59 PM.jpeg…]()
-
 He is in charge of the electronic systems as well as the documentation.
+
+![WhatsApp Image 2024-10-04 at 6 19 59 PM](https://github.com/user-attachments/assets/f6241dd0-05e7-4534-9ef5-7cef05707d50)
 
 **Shauryaveer**:
 
-![Uploading WhatsApp Image 2024-10-04 at 6.20.24 PM.jpeg…]()
+![WhatsApp Image 2024-10-04 at 6 20 24 PM](https://github.com/user-attachments/assets/1370b9de-b810-4a93-ac95-c5978004c1c2)
 
 He is our main designer and constructor and worked on the car's mechanisms
 
@@ -48,11 +48,13 @@ Our Engineering Process
 - Obstacle Management
   - How we achieved our target
   - Explanation
+  - How we achieved our target
   - Future Improvements
   
 Acknowledgement to our mentor Sahil Gajera Sir
 
 Thank you to the judges
+
 
 
 
@@ -76,7 +78,7 @@ Here are the principles we decided on:
 **Logic and Programming**
 - Simple and organized
 - Easy to navigate, debug and troubleshoot
-- Flexible
+- Flexible, able to evolve easily to overcome any issues or edge cases
 
 Based off these fundamental ideas, we aimed to conceptualize our robot.
 Next, we immediately begain the prototyping and iteration process.
