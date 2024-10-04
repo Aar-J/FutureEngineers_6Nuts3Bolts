@@ -12,19 +12,20 @@ Based off of the nature of the task, we divded the industry and each took on a k
 
 # Table of Contents
 Car photos
+
 Our Engineering Process
 - Fundamental Parameters
 - Mobility Management
-  - How we achieved our target
   - Explanation
   - Iteration Process
+  - How we achieved our target
   - Improvements
   - Parts list
 
 - Power and Sense Management
-  - How we achieved our target
   - Explanation
   - Iteration Process
+  - How we achieved our target
   - Improvements
   - Parts list
     
@@ -36,28 +37,6 @@ Our Engineering Process
 Acknowledgement to our mentor Sahil Gajera Sir
 
 Thank you to the judges
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-  
-  
 
 
 
@@ -90,23 +69,28 @@ Here's how we went about turning our vision into reality
 
 ## **Mobility management**
 
-### How we achieved our target
-
-**How we made it Compact**
-
-We began by visualizing how all the components could fit closely together, and we built around that idea. The space between parts is minimal, but we made sure it wouldn’t create any issues in performance or accessibility.
-The overall length of the robot is limited by key components like the NEO 550 motor, bevel gears, and the steering system, while the width is determined by the size of the Spark MAX, ultrasonic sensor, servo, and battery. By carefully balancing the length and width, we were able to create a robot that is compact yet fully functional. The width isn't constrained by any specific part, it’s simply as wide as necessary to accommodate the essential components.
-
-**How we ensured simplicity and practicality**
-
-From the beginning, we adopted a mindset of keeping things simple. We've learned that complexity can quickly lead to chaos, especially when time is tight or you're troubleshooting under pressure. By focusing on simplicity, we narrowed our options and only considered ideas that were practical and easy to implement. If a solution met our goals without adding unnecessary complications, we ran with it. Simplicity also naturally led to practicality because fewer moving parts meant fewer things to go wrong, and every design choice was intentional and straightforward.
-
-**How we made it Modular**
-
-The entire robot is based around three main plates, with each subassembly between them individually 3D printed. This modular design gives us a lot of flexibility. If something goes wrong with a specific part, we don’t need to overhaul the entire system—just swap out the problem area. It makes troubleshooting and maintenance much quicker and less stressful.
-We designed the robot to be broken down into three key systems: the drive system, the steering system, and the electronics assembly. Any part that doesn’t fall into one of these categories is mostly there to provide structural integrity and support to the main components. For instance, the bottom plate doesn’t serve any critical function other than strengthening the overall structure. This modular approach ensures that our robot remains easy to work on, upgrade, and maintain, which is key for long-term reliability.
-
 ### Explanation
+
+**Why we chose the RevRobotics NEO550**
+
+![Untitled design (15)](https://github.com/user-attachments/assets/26456897-bea2-4da2-b72c-7a1d0638b2f2)
+
+
+- It has an absolutely phenomenal power to weight ratio (weighing only 140grams) as well as very high acceleration and has a free running speed of upto 11000 RPM. We have geared it in a 5:1             ratio. 
+- We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
+- It has excellent speed control and is easy to integrate and program with the SparkMax motor controller.
+- We had initially considered making a smaller robot and at the time had considered using an N20 500 RPM Encoder motor, however this placed a lot of restrictions on our other electronics and design. We also considered using a standard Johnson 500 RPM motor, or a TT Gearbox motor however we rejected these for similar reasons as well as the fact that the NEO 550 just outclassed all 3
+
+
+  
+**Why we chose MG996R Servo**
+
+![Untitled design (17)](https://github.com/user-attachments/assets/4b56777f-e333-4446-bb65-d5e678c8a31b)
+
+- It is a popular and reliable servo which for us is delivering about 9.5kgcm(since we are powering it through the RaspberryPi 5V pin)
+- It is easily able to steer our robot even at high speeds.
+- The position accuracy it is able to provide is relaible and it is able to steer at a rate of about 0.30 sec/60° degrees according to our measurements.
+
 **Electronics Mounting Plate** 
 
 ![electronics mounting plate](https://github.com/user-attachments/assets/e39119ec-8c92-4b72-a1e5-0b4f87a88618)
@@ -282,6 +266,21 @@ Overall, this design marked the culmination of all our ideas and refinements, ma
 | **Testing and Feedback**      | Preliminary tests with bulky camera setup | Refined design with specific components, partial finalization | Abandoned due to complexity, compromised steering, and wiring issues | Final optimized version, most refined in terms of design and performance |
 | **Complexity**                | Simple and flexible | More complex but optimized for purpose | Extremely complex and impractical | Balanced complexity with practical refinements |
 
+### How we achieved our target
+
+**How we made it Compact**
+
+We began by visualizing how all the components could fit closely together, and we built around that idea. The space between parts is minimal, but we made sure it wouldn’t create any issues in performance or accessibility.
+The overall length of the robot is limited by key components like the NEO 550 motor, bevel gears, and the steering system, while the width is determined by the size of the Spark MAX, ultrasonic sensor, servo, and battery. By carefully balancing the length and width, we were able to create a robot that is compact yet fully functional. The width isn't constrained by any specific part, it’s simply as wide as necessary to accommodate the essential components.
+
+**How we ensured simplicity and practicality**
+
+From the beginning, we adopted a mindset of keeping things simple. We've learned that complexity can quickly lead to chaos, especially when time is tight or you're troubleshooting under pressure. By focusing on simplicity, we narrowed our options and only considered ideas that were practical and easy to implement. If a solution met our goals without adding unnecessary complications, we ran with it. Simplicity also naturally led to practicality because fewer moving parts meant fewer things to go wrong, and every design choice was intentional and straightforward.
+
+**How we made it Modular**
+
+The entire robot is based around three main plates, with each subassembly between them individually 3D printed. This modular design gives us a lot of flexibility. If something goes wrong with a specific part, we don’t need to overhaul the entire system—just swap out the problem area. It makes troubleshooting and maintenance much quicker and less stressful.
+We designed the robot to be broken down into three key systems: the drive system, the steering system, and the electronics assembly. Any part that doesn’t fall into one of these categories is mostly there to provide structural integrity and support to the main components. For instance, the bottom plate doesn’t serve any critical function other than strengthening the overall structure. This modular approach ensures that our robot remains easy to work on, upgrade, and maintain, which is key for long-term reliability.
 
 
 ### Future Improvements
@@ -312,59 +311,6 @@ If we had more time, we would likely explore a more complex design that branches
 
 ## **Power and sense management**
 
-### **How we achieved Clean and Organized wiring**
-
-To keep our wiring system easy to manage, we focused on clarity, organization and structure in all connections.
-
-We used solid core wire for connections since they can be bent into shape making wiring neat and easy to solder.
-We soldered all wire connections and mounted them on a general purpose board providing a solid foundation for the wiring, minimizing loose wires and clutter.
-Every wire was labeled and color-coded, making it simple to track individual connections. This helped ensure quick identification of components during assembly and troubleshooting.
-  
-Red - VCC wires
-
-Black - GND wires
-
-Purple - PWM Signal (Pin 33 or GPIO 13 on RaspberryPi)
-
-Yellow(Ultrasonic) - TRIG (Pins D3 and D7 on Nano)
-
-Blue(Ultrasonic) - ECHO (Pins D4 and D6 on Nano)
-
-Yellow(BNO055) - SDA (Pin 3 or GPIO 2 on RaspberryPi 
-
-Blue(BNO055) - SCL (Pin 5 or GPIO 3 on RaspberryPi)
-
-Blue(Button) - SIGNAL (Pin 11 or GPIO 17 on RaspberryPi)
-
-Black and White Dual Wire(SparkMax Communication) -
-    
-### **How we ensured Reliability and Safety**
-
-
-
-We took extra care in insulating all exposed connections to prevent shorts or malfunctions. 
-
-
-
-This was done to all soldered connections by applying heat-shrink tubing, hot gluing wire ends and using 
-electrical tape wherever required for additional protection and to reinforce connection stability.
-We used barrier terminal blocks and JST connectors which hold the wires firmly in place thus preventing them from moving around and accidentally causing short circuits or bending of wires.
-Wago connectors were used for connections between the SparkMax and Neo ensuring a tight and insulated fitting.
-    
-### **How we made it convenient to assemble and dissasemble**
-
-
-
-
-Ease of maintainence and assembly was another top priority. 
-
-We soldered header pins onto the general purpose board in order to render the Arduino Nano, BNO055, and servo easily detachable and replaceable.
-The screw in nature of the barrier terminal blocks not only added a layer of security to our electrical system but also served as a way to ensure quick maintanence. The wires can be removed and reattached by simply screwing and unscrewing the terminals. 
-A similar story is for the the JST connectors, their ability to snap in place makes it easy to attach and detach the ultrasonic sensors.
-Wago connectors are convenient to make connections with components where cutting the wiring and making solder joints is not preffered due to the wire being inbuilt into the component like the SparkMax and NEO550.
-We also used crimp connectors for the switch, such that we could quickly remove and replace it if necessary since we had faced issues during practice of the switch being unreliable
-
-
 ## **Explanation**
 
 ### Reason for choice of parts
@@ -391,23 +337,6 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 - The BNO055 is a highly tested and reliable sensor. We had used it earlier in FTC(First Tech Challenge) as well as in a drone we made. We had also used it in Future Engineers the previous year.
 - It has an inbuilt sensor fusion algorithm and it is easy to integrate with the RaspberryPi, communicating over I2C.
-
-**MG996R Servo**
-
-![Untitled design (17)](https://github.com/user-attachments/assets/4b56777f-e333-4446-bb65-d5e678c8a31b)
-
-- It is a popular and reliable servo which for us is delivering about 9.5kgcm(since we are powering it through the RaspberryPi 5V pin)
-- It is easily able to steer our robot even at high speeds.
-- The position accuracy it is able to provide is relaible and it is able to steer at a rate of about 0.30 sec/60° degrees according to our measurements.
-
-**RevRobotics NEO550**
-
-![Untitled design (15)](https://github.com/user-attachments/assets/26456897-bea2-4da2-b72c-7a1d0638b2f2)
-
-
-- It has an absolutely phenomenal power to weight ratio (weighing only 140grams) as well as very high acceleration and has a free running speed of upto 11000 RPM. We have geared it in a 5:1             ratio. 
-- We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
-- It has excellent speed control and is easy to integrate and program with the SparkMax motor controller.
 
 **RevRobotics SparkMax Motor Controller**
 
@@ -456,6 +385,62 @@ It consisted of the Electronics mounted on a cardboard plate and the use of a pr
 This was also merely a prototyping version intended on having a functional robot to program. The differe
 
 ![More well positioned Cardboard Plate](https://github.com/user-attachments/assets/200de56e-0422-4285-8648-1b30d4dbfae6)
+
+
+
+### **How we achieved Clean and Organized wiring**
+
+To keep our wiring system easy to manage, we focused on clarity, organization and structure in all connections.
+
+We used solid core wire for connections since they can be bent into shape making wiring neat and easy to solder.
+We soldered all wire connections and mounted them on a general purpose board providing a solid foundation for the wiring, minimizing loose wires and clutter.
+Every wire was labeled and color-coded, making it simple to track individual connections. This helped ensure quick identification of components during assembly and troubleshooting.
+  
+Red - VCC wires 🟥
+
+Black - GND wires ⬛
+
+Purple - PWM Signal (Pin 33 or GPIO 13 on RaspberryPi) 🟪
+
+Yellow(Ultrasonic) - TRIG (Pins D3 and D7 on Nano) 🟨
+
+Blue(Ultrasonic) - ECHO (Pins D4 and D6 on Nano) 🟦
+
+Yellow(BNO055) - SDA (Pin 3 or GPIO 2 on RaspberryPi 🟨
+
+Blue(BNO055) - SCL (Pin 5 or GPIO 3 on RaspberryPi) 🟦
+
+Blue(Button) - SIGNAL (Pin 11 or GPIO 17 on RaspberryPi) 🟦
+
+Black and White Dual Wire(SparkMax Communication) - ⬛⬜
+    
+### **How we ensured Reliability and Safety**
+
+
+
+We took extra care in insulating all exposed connections to prevent shorts or malfunctions. 
+
+
+
+This was done to all soldered connections by applying heat-shrink tubing, hot gluing wire ends and using 
+electrical tape wherever required for additional protection and to reinforce connection stability.
+We used barrier terminal blocks and JST connectors which hold the wires firmly in place thus preventing them from moving around and accidentally causing short circuits or bending of wires.
+Wago connectors were used for connections between the SparkMax and Neo ensuring a tight and insulated fitting.
+    
+### **How we made it convenient to assemble and dissasemble**
+
+
+![Untitled design (20)](https://github.com/user-attachments/assets/d6dc20bd-f549-43e2-a051-7f55632b9abd)
+
+
+Ease of maintainence and assembly was another top priority. 
+
+We soldered header pins onto the general purpose board in order to render the Arduino Nano, BNO055, and servo easily detachable and replaceable.
+The screw in nature of the barrier terminal blocks not only added a layer of security to our electrical system but also served as a way to ensure quick maintanence. The wires can be removed and reattached by simply screwing and unscrewing the terminals. 
+A similar story is for the the JST connectors, their ability to snap in place makes it easy to attach and detach the ultrasonic sensors.
+Wago connectors are convenient to make connections with components where cutting the wiring and making solder joints is not preffered due to the wire being inbuilt into the component like the SparkMax and NEO550.
+We also used crimp connectors for the switch, such that we could quickly remove and replace it if necessary since we had faced issues during practice of the switch being unreliable
+
 
 
 
