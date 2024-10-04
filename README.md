@@ -31,9 +31,7 @@ Our Engineering Process
 - Obstacle Management
   - How we achieved our target
   - Explanation
-  - Iteration Process
   - Future Improvements
-  - Parts list
   
 Acknowledgement to our mentor Sahil Gajera Sir
 
@@ -487,7 +485,20 @@ https://robu.in/product/mc002076-terminal-block-barrier-3pos/
 
 
 ## **Obstacle management**
+In this sections first we will first discuss how we solved the obstacle challenge and then move onto the  solution for the open round challenge as well as a general explanation of our software and logic flow.
 
+### How we achieved our target
+
+- f
+- f
+- f
+
+  
+### Explanation
+
+
+
+### Future improvements
 
 # Acno
 
