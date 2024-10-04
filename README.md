@@ -502,36 +502,217 @@ In this sections first we will first discuss how we solved the obstacle challeng
 
 First we begin by importing all the libraries
 
-<img width="1113" alt="Screenshot 2024-10-04 at 10 09 20 AM" src="https://github.com/user-attachments/assets/109ae923-64bf-4572-915c-736a8b7ddb6c">
+<img width="286" alt="Screenshot 2024-10-04 at 10 26 26 AM" src="https://github.com/user-attachments/assets/9b523ad5-e819-4962-b974-f98ca9a56ad3">
 
 import time 
 - The time library, as the name suggests allows us to use time related functions like delays.
+
+<img width="317" alt="Screenshot 2024-10-04 at 10 26 46 AM" src="https://github.com/user-attachments/assets/e0d4c704-40b0-4505-895b-d69310235720">
+
   
 import board
 - Its use is primarily to access pins on the RaspberryPi.
+
   
+<img width="290" alt="Screenshot 2024-10-04 at 10 27 02 AM" src="https://github.com/user-attachments/assets/f96954ce-7e75-49d2-a168-eb188038d493">
+
 import busio
 - This library allows us to access external buses and serial protocols allowing for hardware acceleration on the RaspberryPi.
+
+<img width="493" alt="Screenshot 2024-10-04 at 10 27 24 AM" src="https://github.com/user-attachments/assets/9c11009f-34e1-43ec-9f19-eb579e7152c0">
+
   
 import adafruit_bno055   
 - Library for BNO055 IMU sensor
 
+<img width="234" alt="Screenshot 2024-10-04 at 10 27 43 AM" src="https://github.com/user-attachments/assets/1a237e78-b00b-419c-977a-ca158bd15b60">
+
 import sys
 -  This library basically allows us to run functions and call from different files and parts of code. Its gives us commands to access system related variables and functions.
 
+<img width="322" alt="Screenshot 2024-10-04 at 10 28 02 AM" src="https://github.com/user-attachments/assets/b1e16ebd-71c5-45a4-ae34-e92b7a8b246a">
+
+
 import serial  
 - This allows for serial communication with external devices. We communicate with the Arduino Nano over serial
-  
+
+<img width="1058" alt="Screenshot 2024-10-04 at 10 28 16 AM" src="https://github.com/user-attachments/assets/452f1812-624b-43f3-9100-05828492ee0c">
+
 sys.path.append('/usr/lib/python3/dist-packages')  
 - We have created custom packages for the left journey and right journey of the open round. Both are called. The robot must decide which one to run.
+
+<img width="321" alt="Screenshot 2024-10-04 at 10 28 35 AM" src="https://github.com/user-attachments/assets/63cf3fcf-23eb-4e27-89a3-3b8103e7e66c">
   
 import pigpio  # Library for controlling GPIO pins (for PWM/servo control)
-- The RaspberryPi's software PWM signal is often unstable and unreliable. The pigpio library solves this issue generation a hardware PWM on the the     RaspberryPi. 
-from picamera2 import Picamera2, Preview  # Camera library for handling the Raspberry Pi camera
-import cv2  # OpenCV for camera processing and display
+- The RaspberryPi's software PWM signal is often unstable and unreliable. The pigpio library solves this issue generation a hardware PWM on the the         
+  RaspberryPi.
+
+<img width="888" alt="Screenshot 2024-10-04 at 10 28 54 AM" src="https://github.com/user-attachments/assets/6932beb2-6e1b-46d3-b998-727b8ece307d">
+
+from picamera2 import Picamera2, Preview  
+- Camera library for handling the Raspberry Pi camera
+  
+
+<img width="276" alt="Screenshot 2024-10-04 at 10 29 08 AM" src="https://github.com/user-attachments/assets/b2cda5f5-d644-4b27-bd74-fa5a713fc3a1">
+
+import cv2  
+- Here we are importing OpenCV for camera processing and display. This handles all of the vision processing.
+
+  
+<img width="531" alt="Screenshot 2024-10-04 at 10 29 41 AM" src="https://github.com/user-attachments/assets/289d4a76-48d5-4726-9f7c-3b43684cac31">
+
 import JourneyLeft as l  # Custom module to handle left-side journey logic
 import JourneyRight as r  # Custom module to handle right-side journey logic
+- These are the Journeys we made for either running the robot clockwise or counterclockwise. Their explanation is just after.
 
+
+Next we set up all the communication protocols. 
+
+
+<img width="374" alt="Screenshot 2024-10-04 at 10 33 41 AM" src="https://github.com/user-attachments/assets/f6dd3423-100d-4e37-b27d-4e9919f3cc1a">
+
+pi = pigpio.pi() 
+- Initializes the pigpio library for GPIO control
+
+<img width="638" alt="Screenshot 2024-10-04 at 10 35 23 AM" src="https://github.com/user-attachments/assets/12a88ba5-a541-4267-af91-9c5f45e24958">
+
+
+pi.set_mode(18, pigpio.OUTPUT)  
+- Set GPIO pin 18 as an output (for NEO550 Motor)
+  
+pi.set_mode(13, pigpio.OUTPUT) 
+-  Set GPIO pin 13 as an output (for MG996R Servo)
+
+<img width="799" alt="Screenshot 2024-10-04 at 10 34 47 AM" src="https://github.com/user-attachments/assets/e2287659-3f0e-46aa-b39f-dd8bf8c43c03">
+
+
+i2c = busio.I2C(board.SCL, board.SDA)   
+- Initializing I2C bus for communication with the IMU
+
+<img width="882" alt="Screenshot 2024-10-04 at 10 35 39 AM" src="https://github.com/user-attachments/assets/801bd4ad-fec8-4a76-9be1-ef0bd4769a42">
+
+
+ser = serial.Serial('/dev/ttyACM0', 9600)  
+- Setting up a serial connection to an external device (Arduino Nano) at 9600 baud rate
+
+<img width="865" alt="Screenshot 2024-10-04 at 10 35 58 AM" src="https://github.com/user-attachments/assets/620b533a-9c80-40fc-b4b8-90e75cb1e8f1">
+
+
+sensor = adafruit_bno055.BNO055_I2C(i2c)  
+- Initializing the BNO055 sensor using I2C
+
+Now we declare all the control variables in our program. We will use these to build our logic.
+
+<img width="332" alt="Screenshot 2024-10-04 at 10 40 31 AM" src="https://github.com/user-attachments/assets/01ed42a0-ed34-4857-846a-040699c12ea5">
+
+heading = 0.0   
+- To store the heading (direction) from the IMU sensor
+
+<img width="241" alt="Screenshot 2024-10-04 at 10 40 57 AM" src="https://github.com/user-attachments/assets/17669f1f-a5ea-4171-8361-3492d5cdd780">
+  
+dis = 0.0  
+- To store the distance from the left sensor
+  
+ <img width="280" alt="Screenshot 2024-10-04 at 10 41 05 AM" src="https://github.com/user-attachments/assets/716f0033-f278-442e-aa35-e1185f693b73">
+ 
+value = 360 
+- Value to control servo/motor position
+
+<img width="272" alt="Screenshot 2024-10-04 at 10 41 30 AM" src="https://github.com/user-attachments/assets/cc566df5-3954-47f2-bc5c-78150a3de01d">
+
+count = 0  
+- A counter to count number of loop iterations
+
+<img width="407" alt="Screenshot 2024-10-04 at 10 42 12 AM" src="https://github.com/user-attachments/assets/e6afde50-60e3-4bdb-920e-3bc3ed46e21b">
+
+increment = False  
+- Flag for controlling incremental behavior
+
+
+<img width="300" alt="Screenshot 2024-10-04 at 10 42 29 AM" src="https://github.com/user-attachments/assets/5c39fcd2-ea6d-4bd4-aa2b-2af77a657878">
+
+logic = False  
+- Flag variable for decision logic, to decide whether to run left journey or right journey
+
+  
+<img width="265" alt="Screenshot 2024-10-04 at 10 42 44 AM" src="https://github.com/user-attachments/assets/9b53b124-32ec-4668-8d55-b86a3b865432">
+
+flag = True  
+- Flag variable to track state
+
+  
+<img width="276" alt="Screenshot 2024-10-04 at 10 43 01 AM" src="https://github.com/user-attachments/assets/ba531017-740c-4ef8-a204-986112c10f6c">
+
+init = True  
+- Flag variable to track initialization state
+
+
+<img width="207" alt="Screenshot 2024-10-04 at 10 43 18 AM" src="https://github.com/user-attachments/assets/c8836b31-5e56-44e1-836d-2e129c2c44da">
+
+left = 0  
+- Flag variable to track whether the robot is turning left or right
+
+  
+<img width="312" alt="Screenshot 2024-10-04 at 10 43 31 AM" src="https://github.com/user-attachments/assets/8a86c8e7-864d-45f8-bc39-9b718ee1c5e6">
+
+time.sleep(3)  
+- Delay for 3 seconds before starting the main loop
+
+Now we come to the main loop of our program.
+
+<img width="674" alt="Screenshot 2024-10-04 at 10 45 54 AM" src="https://github.com/user-attachments/assets/d3182a30-1361-4b3a-a7c2-c5251f10c02e">
+
+- The main loop runs as long as count is less than 3.
+  
+- sensor.euler: Reads the Euler angles from the BNO055 sensor, including the heading (yaw). We calculate our error based off this value
+
+- The try-except block ensures the heading stays within the range of 0 to 360 degrees. If there's an error in reading the sensor, the heading is set to 0.
+  
+- ser.readline(): Reads a line of distance data from the Nano.
+  
+- The try-except block attempts to split the incoming data into two values (dis for the left distance and distanceRight for the right distance). If parsing 
+  fails, both distances are set to 0.
+
+Within this loop we have 3 logics:
+1. Left and right journey Logic
+
+   <img width="1080" alt="Screenshot 2024-10-04 at 10 49 57 AM" src="https://github.com/user-attachments/assets/47d5de99-ef38-4600-a9f7-b94648179db1">
+
+- If the robot is set to move left, (left == 1), then it calls the L_journey() function from the JourneyLeft module, which handles the logic for left-side movement. The function returns updated values for value, logic, flag, etc.
+  
+- Similarly, if the robot is set to move right, (left == 2), it calls the R_journey() function from the JourneyRight module, which handles the logic for   
+  right-side movement.
+  
+- The variable init ensures that certain behaviors only happen on the first run of the loop.
+
+
+2. Distance Comparison Logic
+   
+   <img width="1079" alt="Screenshot 2024-10-04 at 10 50 55 AM" src="https://github.com/user-attachments/assets/2c2526c0-8cae-44a4-89f9-6a5ff3ff4a73">
+
+- If the left distance (dis) is greater than the right distance and both are more than 100 cm, the robot turns left by calling the L_journey() function.
+  
+- Similarly if the right distance is greater than the left, the robot turns right by calling the R_journey() function.
+  
+- This logic ensures the robot chooses which direction to move based on sensor readings.
+
+
+3. Default(Straight movement) and exit logic
+   
+   <img width="366" alt="Screenshot 2024-10-04 at 10 51 45 AM" src="https://github.com/user-attachments/assets/62bc5541-f199-410a-bae8-ca4bbff4b23c">
+
+- If the robot is neither turning left nor right, it calls the default move() function from the JourneyLeft module, which handles straight-line movement.
+- The cv2.waitKey(1) function listens for keyboard input. If the user presses 'Q' or 'q', the loop exits, stopping the robot.
+
+Final actions after the loop:
+
+<img width="306" alt="Screenshot 2024-10-04 at 10 54 39 AM" src="https://github.com/user-attachments/assets/26cc3a41-2878-4e97-a28a-66c3ed0005fd">
+
+- After the loop ends, the robot performs a final stopping movement.
+- pi.set_servo_pulsewidth(13, 0) stops the servo or motor connected to GPIO pin 13 by setting the pulse width to 0, ensuring the robot halts.
+
+Logic Flowchart
+  
 
 
 
