@@ -1,4 +1,4 @@
-<img width="440" alt="Screenshot 2024-10-04 at 12 01 18 PM" src="https://github.com/user-attachments/assets/2903a279-c365-4ecb-95fb-43c1fa0d8bc7"># Welcome to our GitHub!
+![Untitled design (11)](https://github.com/user-attachments/assets/6f62a1ab-ac59-4301-bdf5-77ba615ff212)<img width="440" alt="Screenshot 2024-10-04 at 12 01 18 PM" src="https://github.com/user-attachments/assets/2903a279-c365-4ecb-95fb-43c1fa0d8bc7"># Welcome to our GitHub!
 
 # Introduction
 We are team 6Nuts3Bolts, a dynamic trio of passionate robotics enthusiasts. 
@@ -108,24 +108,45 @@ We designed the robot to be broken down into three key systems: the drive system
 
 ### Explanation
 **Electronics Mounting Plate** 
+
+![electronics mounting plate](https://github.com/user-attachments/assets/e39119ec-8c92-4b72-a1e5-0b4f87a88618)
+
 The electronics table offers ample space for organizing wiring effectively. It is spacious enough to accommodate most of the wiring, ensuring everything remains well-organized and accessible for easy maintenance and troubleshooting.
 
+
 **Top Plate**
+
+![Untitled design (1)](https://github.com/user-attachments/assets/815c4f68-19e9-4349-a632-4170923ccb45)
+
 The top plate is the strongest and most robust part of the robot, serving as its backbone. It plays a vital role in every subsystem, providing structural integrity and supporting the entire design.
 
 **Bottom Plate**
+
+![Untitled design (2)](https://github.com/user-attachments/assets/45ab43b4-e322-4715-b68a-95a7c47e62ff)
+
 The bottom plate provides essential support and serves as a key aesthetic feature for the robot. It protects the belly of the robot from potential damage while also adding significant structural integrity to the overall foundation. By ensuring a strong base, the bottom plate helps maintain the robot's durability and stability during operation. Its role in reinforcing the lower framework makes it a critical component of the robot's design.
 
 **Bevel Gears**  
+
+![Untitled design (3)](https://github.com/user-attachments/assets/2d95967f-9e37-4fae-8788-6848ae470fc9)
+
 The bevel gears are designed for durability, featuring a large diameter and sizable teeth. This design ensures they wear out more slowly, making them reliable and long-lasting components of the drive system.
 
 **Motor Bracket**  
+
+![Untitled design (4)](https://github.com/user-attachments/assets/a0075cea-ff21-428c-9d49-f832a0f97439)
+
 The motor bracket is small and simple in design, effectively performing its function without occupying excessive space. It optimizes space utilization while ensuring the motor is securely mounted.
 
 **Camera Mount**  
+
+
 The camera mount is tall and adjustable, providing flexibility in positioning without taking up much flat space on the electronics table. It offers several customization options to fit various configurations as needed.
 
 **Steering System**  
+
+![Untitled design (5)](https://github.com/user-attachments/assets/df74422c-9f8a-428c-a316-ea740887221c)
+
 The steering system is compact and straightforward, featuring a linkage-based design. It allows for the maximum possible steering angle and is highly reliable, ensuring excellent maneuverability and performance.
 
 ### Iteration process
@@ -319,7 +340,11 @@ Black and White Dual Wire(SparkMax Communication) -
     
 ### **How we ensured Reliability and Safety**
 
+
+
 We took extra care in insulating all exposed connections to prevent shorts or malfunctions. 
+
+
 
 This was done to all soldered connections by applying heat-shrink tubing, hot gluing wire ends and using 
 electrical tape wherever required for additional protection and to reinforce connection stability.
@@ -327,6 +352,8 @@ We used barrier terminal blocks and JST connectors which hold the wires firmly i
 Wago connectors were used for connections between the SparkMax and Neo ensuring a tight and insulated fitting.
     
 ### **How we made it convenient to assemble and dissasemble**
+
+![More well constructed cardboard plate](https://github.com/user-attachments/assets/773cbe3e-ad26-4bd9-b5d0-d132d8929a3b)
 
 Ease of maintainence and assembly was another top priority. 
 
@@ -336,11 +363,13 @@ A similar story is for the the JST connectors, their ability to snap in place ma
 Wago connectors are convenient to make connections with components where cutting the wiring and making solder joints is not preffered due to the wire being inbuilt into the component like the SparkMax and NEO550.
 We also used crimp connectors for the switch, such that we could quickly remove and replace it if necessary since we had faced issues during practice of the switch being unreliable
 
+
 ## **Explanation**
 
 ### Reason for choice of parts
 
 **RaspberryPi 4B**
+
 - With its quad-core ARM Cortex-A72 64-bit 1.5GHz processor and 8GB RAM it meant that we would never face a computationl bottleneck, even with the heavy task of image processing in the obstacle         challenge.
 - Its ability to be programmed and controlled wirelessly was a boon during the testing and debugging phase as we could run the robot almost continuously without having to detach and reattach            the cable for uploading code.
 - Its extensive use and testing was the reason we chose to go with the RaspberryPi 4B instead of the newer RaspberryPi 5. If there was ever an issue we faced, it could most likely be solved by          searching up the problem.
@@ -357,10 +386,14 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 **BNO055 IMU**
 
+
+
 - The BNO055 is a highly tested and reliable sensor. We had used it earlier in FTC(First Tech Challenge) as well as in a drone we made. We had also used it in Future Engineers the previous year.
 - It has an inbuilt sensor fusion algorithm and it is easy to integrate with the RaspberryPi, communicating over I2C.
 
 **MG996R Servo**
+
+![Untitled design (11)](https://github.com/user-attachments/assets/5aa4f6f9-b4ba-4ebc-bc07-d1b644571168)
 
 - It is a popular and reliable servo which for us is delivering about 9.5kgcm(since we are powering it through the RaspberryPi 5V pin)
 - It is easily able to steer our robot even at high speeds.
@@ -368,16 +401,22 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 **RevRobotics NEO550**
 
+![Untitled design (9)](https://github.com/user-attachments/assets/5aaae47c-9e4e-4e74-bcd5-954adc0242c3)
+
 - It has an absolutely phenomenal power to weight ratio (weighing only 140grams) as well as very high acceleration and has a free running speed of upto 11000 RPM. We have geared it in a 5:1             ratio. 
 - We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
 - It has excellent speed control and is easy to integrate and program with the SparkMax motor controller.
 
 **RevRobotics SparkMax Motor Controller**
 
+![Untitled design (8)](https://github.com/user-attachments/assets/4ddf2347-bef1-458f-9732-62f1940eeb20)
+
 - Using the NEO550 meant we would have to use this since they are complimentary pieces of hardware.
 - Its inbuilt current limiting feature also allows for the motor to remain safe from sudden power surges.
 
 **HC-SRO4 Ultrasonic Sensors**
+
+![Untitled design (12)](https://github.com/user-attachments/assets/67a69d7a-b94d-47c2-b5a8-9b72049f36e1)
 
 - These are widely available and a popular choice of sensor although sometimes they may be unreliable, with good programming they can be made to work just fine. 
 - There are many resources and libraries available online to control these effectively making both programming and troubleshooting easy to do.
@@ -385,6 +424,8 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 - Apart from that, its also easy to integrate
 
 **Xcluma USB Buck Converter**
+
+![Untitled design (10)](https://github.com/user-attachments/assets/1e6d3b3d-196f-4b8c-98e4-395b42cbf9c3)
 
 - It was able to provide a more stable output of 5V than the buck converter we were previously using. It also made it such that we could easily power the RaspberryPi through its USBC port.
 - It was also more compact than the previous buck.
@@ -420,6 +461,10 @@ This was also merely a prototyping version intended on having a functional robot
 
 ### Future Improvements
 
+- We plan on using PCB Design software to create a circuit design and then have that PCB printed and manufactured. This will almost completely eliminate     small wired connections and chance of circuit failure.
+- We also plan on swapping out the HC-SR04 Ultrasonic sensors with faster and more reliable ones like the URM09 or SEN001.
+- We may also swap out the RaspberryPi for a faster controller like the Jetson Nano
+- 
 
 
 ### Electrical Components list:
@@ -479,6 +524,8 @@ https://robu.in/product/mc002076-terminal-block-barrier-3pos/
   https://www.tsktech.in/product/6-3mm-female-spade-connector-with-insulator-boot-crimp-terminal-thimbles-no-color-choice-pack-of-10nos/
   
 -**Wago Connectors**
+
+
  https://www.flipkart.com/wago-2-conductor-compact-inline-splicing-connectors-electrical-wire-connector/p/itmd8735b383bb17?pid=WJCHYGCR7GEYHDBV&lid=LSTWJCHYGCR7GEYHDBVIEKFMH&marketplace=FLIPKART&cmpid=content_wire-joint-connector_8965229628_gmc
 
 
