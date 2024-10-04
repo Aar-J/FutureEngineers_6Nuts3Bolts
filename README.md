@@ -410,9 +410,9 @@ Yellow(BNO055) - SDA (Pin 3 or GPIO 2 on RaspberryPi 🟨
 
 Blue(BNO055) - SCL (Pin 5 or GPIO 3 on RaspberryPi) 🟦
 
-Blue(Button) - SIGNAL (Pin 11 or GPIO 17 on RaspberryPi) 🟦
+Blue(Button) - SIGNAL (Pin 11 or GPIO 17 on RaspberryPi) 🟦 
 
-Black and White Dual Wire(SparkMax Communication) - ⬛⬜
+Black and White Dual Wire(SparkMax Communication) - ⬛⬜ (Pin 33 GPIO 18 and Pin 34 or Ground)
     
 ### **How we ensured Reliability and Safety**
 
@@ -429,9 +429,7 @@ Wago connectors were used for connections between the SparkMax and Neo ensuring 
     
 ### **How we made it convenient to assemble and dissasemble**
 
-
-![Untitled design (20)](https://github.com/user-attachments/assets/d6dc20bd-f549-43e2-a051-7f55632b9abd)
-
+![Untitled design (21)](https://github.com/user-attachments/assets/046e0c53-fc12-42d1-b049-2754668d87a7)
 
 Ease of maintainence and assembly was another top priority. 
 
