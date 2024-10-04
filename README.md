@@ -111,32 +111,35 @@ Here's how we went about turning our vision into reality
 
 **Electronics Mounting Plate** 
 
-![electronics mounting plate](https://github.com/user-attachments/assets/e39119ec-8c92-4b72-a1e5-0b4f87a88618)
+![Untitled design (22)](https://github.com/user-attachments/assets/6e140fad-c1ad-48fc-a7ca-da6544f76aa2)
+
+
 
 The electronics table offers ample space for organizing wiring effectively. It is spacious enough to accommodate most of the wiring, ensuring everything remains well-organized and accessible for easy maintenance and troubleshooting.
 
 
 **Top Plate**
 
-![Untitled design (1)](https://github.com/user-attachments/assets/815c4f68-19e9-4349-a632-4170923ccb45)
+![Untitled design (23)](https://github.com/user-attachments/assets/2b114052-4044-4fd0-98a4-c4719d0c3e10)
+
 
 The top plate is the strongest and most robust part of the robot, serving as its backbone. It plays a vital role in every subsystem, providing structural integrity and supporting the entire design.
 
 **Bottom Plate**
 
-![Untitled design (2)](https://github.com/user-attachments/assets/45ab43b4-e322-4715-b68a-95a7c47e62ff)
+![Untitled design (24)](https://github.com/user-attachments/assets/9a76d7ae-a4c2-43fb-8ad1-1b5610d95315)
 
 The bottom plate provides essential support and serves as a key aesthetic feature for the robot. It protects the belly of the robot from potential damage while also adding significant structural integrity to the overall foundation. By ensuring a strong base, the bottom plate helps maintain the robot's durability and stability during operation. Its role in reinforcing the lower framework makes it a critical component of the robot's design.
 
 **Bevel Gears**  
 
-![Untitled design (3)](https://github.com/user-attachments/assets/2d95967f-9e37-4fae-8788-6848ae470fc9)
+
 
 The bevel gears are designed for durability, featuring a large diameter and sizable teeth. This design ensures they wear out more slowly, making them reliable and long-lasting components of the drive system.
 
 **Motor Bracket**  
 
-![Untitled design (4)](https://github.com/user-attachments/assets/a0075cea-ff21-428c-9d49-f832a0f97439)
+
 
 The motor bracket is small and simple in design, effectively performing its function without occupying excessive space. It optimizes space utilization while ensuring the motor is securely mounted.
 
@@ -147,7 +150,7 @@ The camera mount is tall and adjustable, providing flexibility in positioning wi
 
 **Steering System**  
 
-![Untitled design (5)](https://github.com/user-attachments/assets/df74422c-9f8a-428c-a316-ea740887221c)
+
 
 The steering system is compact and straightforward, featuring a linkage-based design. It allows for the maximum possible steering angle and is highly reliable, ensuring excellent maneuverability and performance.
 
