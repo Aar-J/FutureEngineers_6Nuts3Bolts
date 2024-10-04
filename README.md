@@ -1,4 +1,4 @@
-# Welcome to our GitHub!
+<img width="440" alt="Screenshot 2024-10-04 at 12 01 18 PM" src="https://github.com/user-attachments/assets/2903a279-c365-4ecb-95fb-43c1fa0d8bc7"># Welcome to our GitHub!
 
 # Introduction
 We are team 6Nuts3Bolts, a dynamic trio of passionate robotics enthusiasts. 
@@ -711,14 +711,123 @@ Final actions after the loop:
 - After the loop ends, the robot performs a final stopping movement.
 - pi.set_servo_pulsewidth(13, 0) stops the servo or motor connected to GPIO pin 13 by setting the pulse width to 0, ensuring the robot halts.
 
+Here's an explanation of the journey logic explained using the example of the Journey Right program.
+
+The setup of the libraries and pins for the Journey Right and Left programs is the same hence, explaining that once again would be redundancy.
+
+PID Controller
+
+Here we initialise our PID function
+
+<img width="232" alt="Screenshot 2024-10-04 at 11 54 26 AM" src="https://github.com/user-attachments/assets/222e70d4-4253-4bd9-986b-fc262bc11dfa">
+
+The input parameters for the PID Controller are :
+
+**y** 
+- This is the target heading or the direction you want the robot to face.
+  
+**heading** 
+- This stores the current heading of the robot, i.e., the direction the robot is currently facing, measured by the BNO055 sensor.
+  
+**kP**
+- This represents the proportional constant used to determine how much correction to apply based on the error. The higher the constant, the more   
+  aggressively the robot will correct its heading.
+  
+<img width="254" alt="Screenshot 2024-10-04 at 11 55 24 AM" src="https://github.com/user-attachments/assets/f34ac108-5ead-4c7c-9661-5fbef5adf656">
+
+Here we normalize our "y" or target heading.
+- This part ensures y is normalized within the range of -180 to 180 degrees.
+  
+- The idea is to convert the heading into a more manageable format that can be used for comparison and calculation.
+  
+- If y is less than 360 - y, it remains unchanged.
+  
+- If y == 360 - y, meaning it’s exactly opposite (180 degrees), it's set to 180 degrees.
+  
+- Otherwise, it subtracts y from 360, effectively flipping it to the opposite direction.
+
+  <img width="300" alt="Screenshot 2024-10-04 at 11 57 05 AM" src="https://github.com/user-attachments/assets/9a7a47d5-0a5e-494e-a163-3af0ad753024">
+
+Similarly, this block normalises our current heading.
+
+In this block, we calculate our error.
+
+<img width="291" alt="Screenshot 2024-10-04 at 11 59 03 AM" src="https://github.com/user-attachments/assets/3f4c3e00-2fa1-4119-820d-e97cc7df237e">
+
+- Error is the difference between the current heading and the target heading.
+  
+- This error is used to determine how much the robot needs to adjust its steering to correct its path.
+  
+- There are three conditions:
+  
+  - Both headings are negative: The error is simply the difference between heading and y.
+  - Heading is negative, but the target is positive: The error is the sum of y and heading.
+  - In all other cases: The error is calculated as the difference between heading and y.
+ 
+
+Based off this, we calculate our turn value and return it.
+
+<img width="440" alt="Screenshot 2024-10-04 at 12 01 44 PM" src="https://github.com/user-attachments/assets/bd820241-a43c-4d82-b3b9-2aeb9c8c6f91">
+
+
+- This line calculates the servo pulse width for the robot’s steering servo based on the error.
+
+- The idea is to adjust the robot’s steering proportionally to the error, which means the bigger the error, the bigger the correction.
+
+- The formula is: 1200 - error * kP, where 1200 is the neutral position (centered steering), and error * kP is the correction based on how far off the 
+  heading is.
+
+- To prevent extreme values, the min and max functions are used to clamp the output between 800 and 1600. These limits ensure that the servo doesn’t exceed 
+  its physical range
+
+
+Finally, this is the R_Journey function
+
+<img width="774" alt="Screenshot 2024-10-04 at 12 05 05 PM" src="https://github.com/user-attachments/assets/b10602af-dab2-4c90-aad9-a318f6ba0a10">
+
+This section resets the variables when the journey starts.
+We also display our enthusiasm upon its initialisation.
+
+
+In case we encounter a large right distance, we handle it in this block
+
+<img width="369" alt="Screenshot 2024-10-04 at 12 09 07 PM" src="https://github.com/user-attachments/assets/feaa7a01-8649-49e7-bd73-f2aa8f6b572e">
+
+- If the right distance is large (>= 120 units), or the robot is already turning (logic flag is True), it adjusts the desired heading (value) by 90 degrees.
+  
+- If value reaches 360, it is reset to 0.
+  
+
+Here is our Steering logic.
+
+<img width="799" alt="Screenshot 2024-10-04 at 12 11 51 PM" src="https://github.com/user-attachments/assets/34329e69-7704-41e5-a68e-8e2c9572d7b3">
+
+- If the current heading is not within a certain range of the desired heading, the robot adjusts its turn.
+  
+- The servo_pulsewidth for GPIO 18 controls the motor's speed for forward movement.
+  
+- pi.set_servo_pulsewidth(13, 1570) is set to control steering based on the difference between the current and desired heading.
+  
+
+Lastly we have the straight movement case.
+
+<img width="542" alt="Screenshot 2024-10-04 at 12 16 36 PM" src="https://github.com/user-attachments/assets/15c9bd78-5791-411c-bc24-f054bd11896c">
+
+- If the robot is not turning, it moves forward, and the PID controller is used to ensure the robot stays on course.
+  
+- Servo Control: The pid function is called to calculate the pulse width for steering correction.
+
 Logic Flowchart
   
+![algorithm_flowchart](https://github.com/user-attachments/assets/f694ea93-8fb8-4353-9f17-779f5dc22ccb)
 
 
 
 ### Future improvements
 
-# Acno
+# Acknowledgement to our Mentor Sahil Gajera Sir
+
+
 
 
 
