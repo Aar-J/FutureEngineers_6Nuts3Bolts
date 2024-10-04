@@ -125,7 +125,10 @@ Here's how we went about turning our vision into reality
 ![Untitled design (15)](https://github.com/user-attachments/assets/26456897-bea2-4da2-b72c-7a1d0638b2f2)
 
 
-- It has an absolutely phenomenal power to weight ratio (weighing only 140grams) as well as very high acceleration and has a free running speed of upto 11000 RPM. We have geared it in a 5:1             ratio. 
+- It has an absolutely phenomenal power to weight ratio (weighing only 140grams and has a peak output power of 279W) as well as very high acceleration and has a free running speed of upto 11000 RPM.   We have geared it in a 5:1 ratio. This can further be seen through this graph
+  
+![Untitled design (55)](https://github.com/user-attachments/assets/c9efb737-dfcb-4299-91cf-cf606c6d979a)
+
 - We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
 - It has excellent speed control and is easy to integrate and program with the SparkMax motor controller.
 - We had initially considered making a smaller robot and at the time had considered using an N20 500 RPM Encoder motor, however this placed a lot of restrictions on our other electronics and design. We also considered using a standard Johnson 500 RPM motor, or a TT Gearbox motor however we rejected these for similar reasons as well as the fact that the NEO 550 just outclassed all 3
