@@ -4,13 +4,26 @@
 We are team 6Nuts3Bolts, a dynamic trio of passionate robotics enthusiasts. 
 Based off of the nature of the task, we divded the industry and each took on a key aspect of the challenge.
 
-**Arham**: He is in charge of the electronic systems as well as the documentation.
+**Arham**: 
 
-**Shauryaveer**: He is our main designer and constructor and worked on the car's mechanisms
+![Uploading WhatsApp Image 2024-10-04 at 6.19.59 PM.jpeg…]()
 
-**Ranveer**: He is our programming lead, in responsible for all the code and processing on our robot.
+He is in charge of the electronic systems as well as the documentation.
 
-Team Photo.
+**Shauryaveer**:
+
+![Uploading WhatsApp Image 2024-10-04 at 6.20.24 PM.jpeg…]()
+
+He is our main designer and constructor and worked on the car's mechanisms
+
+**Ranveer**: 
+
+![WhatsApp Image 2024-10-04 at 6 20 25 PM](https://github.com/user-attachments/assets/d438b62a-15f7-4e45-9bb9-086e6d58676f)
+
+He is our programming lead, in responsible for all the code and processing on our robot.
+
+**Team Photo**:
+
 
 # Table of Contents
 Car photos
@@ -61,9 +74,9 @@ Here are the principles we decided on:
 - Easy to assemble and dissassemble
 
 **Logic and Programming**
-- f
-- f
-- f
+- Simple and organized
+- Easy to navigate, debug and troubleshoot
+- Flexible
 
 Based off these fundamental ideas, we aimed to conceptualize our robot.
 Next, we immediately begain the prototyping and iteration process.
