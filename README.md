@@ -353,7 +353,8 @@ Wago connectors were used for connections between the SparkMax and Neo ensuring 
     
 ### **How we made it convenient to assemble and dissasemble**
 
-![More well constructed cardboard plate](https://github.com/user-attachments/assets/773cbe3e-ad26-4bd9-b5d0-d132d8929a3b)
+
+
 
 Ease of maintainence and assembly was another top priority. 
 
