@@ -374,14 +374,14 @@ If we had more time, we would likely explore a more complex design that branches
 
 **Arduino Nano**
 
-
+![Untitled design (37)](https://github.com/user-attachments/assets/91d78d54-0efb-44dd-b30f-d73b39976214)
 
 - The use of the Arduino Nano in our robot is solely to gather data from the ultrasonic sensors and relay it to the RaspberryPi. 
 - Hence its compactness and low power consumption was the main reason we chose to use it.
 
 **BNO055 IMU**
 
-
+![Untitled design (38)](https://github.com/user-attachments/assets/82430926-f698-4311-973f-7d68fe5aa4e2)
 
 - The BNO055 is a highly tested and reliable sensor. We had used it earlier in FTC(First Tech Challenge) as well as in a drone we made. We had also used it in Future Engineers the previous year.
 - It has an inbuilt sensor fusion algorithm and it is easy to integrate with the RaspberryPi, communicating over I2C.
@@ -411,6 +411,8 @@ If we had more time, we would likely explore a more complex design that branches
 - Its built in safety feature of preventing against overvoltage and overcurrent proved to be useful especially during testing.
 
 **2200MAh 40C 12V LiPo Battery** 
+
+![Untitled design (39)](https://github.com/user-attachments/assets/137684c1-1fef-4514-a98d-b9a49b995c0c)
 
 - We needed a high power battery since the electronic components we used(RaspberryPi while image processing, NEO550) were quite power hungry.
 - It was also capable of providing our robot with a long runtime. We can run our robot for 12 minutes continuously.
