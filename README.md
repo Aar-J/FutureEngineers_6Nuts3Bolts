@@ -472,11 +472,12 @@ The Crius power distribution board was a cool piece, however it was ultimately r
 The fuse we were using had a rating of 15A. Our circuit will never draw more than 4A hence this was also unnecessary.
 The cardboard plate mounting although humble, actually surprised us as it turned out to be quite solid and reliable. However we  knew that having a proper circuit board would yet be a better decision.
 
-![More well positioned Cardboard Plate (1)](https://github.com/user-attachments/assets/ea1ce81d-7ed0-4176-bc49-50e5ac20a495)
+![More well positioned Cardboard Plate (2)](https://github.com/user-attachments/assets/03c9f83a-f3a1-4a62-8f55-b73d969924c3)
+
 
 **Version 3**
 
-![Untitled design (54)](https://github.com/user-attachments/assets/d6f0061f-cdfd-4a3c-a2c3-5f9241d964f6)
+![Untitled design (60)](https://github.com/user-attachments/assets/cfe87e2d-a958-4d80-8f49-7e40cb74d1aa)
 
 We were always planning on soldering all the components onto one single board for the final iteration of our robot, however due to changes in components as well as troubleshooting, we waited till all our systems were finalised before making our circuit board. This is what we used for version 4(final) of our design
 
