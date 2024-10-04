@@ -501,6 +501,7 @@ Black and White Dual Wire(SparkMax Communication) - ⬛⬜ (Pin 33 GPIO 18 and P
 
 We took extra care in insulating all exposed connections to prevent shorts or malfunctions. 
 
+![Untitled design (53)](https://github.com/user-attachments/assets/0ed8f8e7-5ec6-4ecb-b0c4-3b5d5ee5bc40)
 
 
 This was done to all soldered connections by applying heat-shrink tubing, hot gluing wire ends and using 
@@ -510,9 +511,12 @@ Wago connectors were used for connections between the SparkMax and Neo ensuring 
     
 ### **How we made it convenient to assemble and dissasemble**
 
-![Untitled design (21)](https://github.com/user-attachments/assets/046e0c53-fc12-42d1-b049-2754668d87a7)
+![Untitled design (52)](https://github.com/user-attachments/assets/28462c28-3486-4077-a786-49edd870639d)
+
 
 Ease of maintainence and assembly was another top priority. 
+
+
 
 We soldered header pins onto the general purpose board in order to render the Arduino Nano, BNO055, and servo easily detachable and replaceable.
 The screw in nature of the barrier terminal blocks not only added a layer of security to our electrical system but also served as a way to ensure quick maintanence. The wires can be removed and reattached by simply screwing and unscrewing the terminals. 
