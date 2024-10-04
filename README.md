@@ -496,6 +496,43 @@ In this sections first we will first discuss how we solved the obstacle challeng
   
 ### Explanation
 
+**Obstacle Challenge**
+
+**Open Round**
+
+First we begin by importing all the libraries
+
+<img width="1113" alt="Screenshot 2024-10-04 at 10 09 20 AM" src="https://github.com/user-attachments/assets/109ae923-64bf-4572-915c-736a8b7ddb6c">
+
+import time 
+- The time library, as the name suggests allows us to use time related functions like delays.
+  
+import board
+- Its use is primarily to access pins on the RaspberryPi.
+  
+import busio
+- This library allows us to access external buses and serial protocols allowing for hardware acceleration on the RaspberryPi.
+  
+import adafruit_bno055   
+- Library for BNO055 IMU sensor
+
+import sys
+-  This library basically allows us to run functions and call from different files and parts of code. Its gives us commands to access system related variables and functions.
+
+import serial  
+- This allows for serial communication with external devices. We communicate with the Arduino Nano over serial
+  
+sys.path.append('/usr/lib/python3/dist-packages')  
+- We have created custom packages for the left journey and right journey of the open round. Both are called. The robot must decide which one to run.
+  
+import pigpio  # Library for controlling GPIO pins (for PWM/servo control)
+- The RaspberryPi's software PWM signal is often unstable and unreliable. The pigpio library solves this issue generation a hardware PWM on the the     RaspberryPi. 
+from picamera2 import Picamera2, Preview  # Camera library for handling the Raspberry Pi camera
+import cv2  # OpenCV for camera processing and display
+import JourneyLeft as l  # Custom module to handle left-side journey logic
+import JourneyRight as r  # Custom module to handle right-side journey logic
+
+
 
 
 ### Future improvements
