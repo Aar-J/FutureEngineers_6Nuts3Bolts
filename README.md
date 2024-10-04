@@ -24,6 +24,11 @@ He is our programming lead, in responsible for all the code and processing on ou
 
 **Team Photo**:
 
+![Untitled design (48)](https://github.com/user-attachments/assets/1aba74d8-c68e-492b-9a07-7dc43435b032)
+
+
+![Untitled design (49)](https://github.com/user-attachments/assets/645a0322-99c8-46a6-b1d0-af7732240219)
+
 
 # Table of Contents
 Car photos
@@ -60,17 +65,29 @@ Thank you to the judges
 
 ### Top View
 
-![Untitled design (41)](https://github.com/user-attachments/assets/fa3ed176-4482-46d3-966b-5a507e9104ad)
+![Untitled design (42)](https://github.com/user-attachments/assets/0ae2777f-5648-49b3-aa65-0683578b196a)
+
 
 ### Bottom View
 
+![Untitled design (43)](https://github.com/user-attachments/assets/4afd1ba0-b198-4dd1-ae98-a72a51e45ee0)
+
 ### Front View
+
+![Untitled design (44)](https://github.com/user-attachments/assets/460a90a4-3080-4a0a-8960-465ff6ee8f46)
 
 ### Back View
 
+![Untitled design (45)](https://github.com/user-attachments/assets/648c89e8-255e-4964-9f27-3388f346e98c)
+
 ### Left side 
 
+![Untitled design (46)](https://github.com/user-attachments/assets/d4f9266e-9521-4fba-a706-011ab2f6ab16)
+
 ### Right Side
+
+![Untitled design (47)](https://github.com/user-attachments/assets/c0efcff8-f4db-4bb3-a8db-db5ccc4c4576)
+
 
 # Our Engineering Process
 We have used scoring criteria from the ruleblock as headings in our documentation to make it easy to navigate our repository.
