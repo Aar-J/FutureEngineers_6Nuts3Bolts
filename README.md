@@ -126,8 +126,8 @@ Here's how we went about turning our vision into reality
 
 
 - It has an absolutely phenomenal power to weight ratio (weighing only 140grams and has a peak output power of 279W) as well as very high acceleration and has a free running speed of upto 11000 RPM.   We have geared it in a 5:1 ratio. This can further be seen through this graph
-  
-![Untitled design (55)](https://github.com/user-attachments/assets/c9efb737-dfcb-4299-91cf-cf606c6d979a)
+
+![Untitled design (56)](https://github.com/user-attachments/assets/3f7abb8c-7722-43f5-a9f6-e8644affdd66)
 
 - We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
 - It has excellent speed control and is easy to integrate and program with the SparkMax motor controller.
@@ -1079,12 +1079,17 @@ Lastly we have the straight movement case.
 
 # Acknowledgement to our Mentor Sahil Gajera Sir
 
+![Untitled design (57)](https://github.com/user-attachments/assets/ba53bf6b-7ec3-4a24-90c7-5e0ba338dc6b)
 
+We would like to express our gratitude to our mentor Sahil Gajera Sir for his invaluable technical guidance throughout the competition.
+Moreover, his constant encouragement and unwavering moral support motivated us to push our limits and stay focused. 
+Thank you, Sir, for being an incredible mentor!
 
+# Acknowledgement to our esteemed Judges
 
-
-
-
+We would like to extend our sincere thanks to the esteemed judges for taking the time to review our engineering notebook with such care and patience.
+We greatly appreciate your dedication to guiding us through this process and for the opportunity to showcase our efforts and passion for technology. 
+Thank you for contributing to our development as future engineers!
 
 
 
