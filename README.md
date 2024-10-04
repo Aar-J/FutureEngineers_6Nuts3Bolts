@@ -113,6 +113,7 @@ Here's how we went about turning our vision into reality
 
 ![Untitled design (22)](https://github.com/user-attachments/assets/6e140fad-c1ad-48fc-a7ca-da6544f76aa2)
 
+![Untitled design (29)](https://github.com/user-attachments/assets/c8a7be4b-8979-40d6-9d7e-6cbb1bf7db3d)
 
 
 The electronics table offers ample space for organizing wiring effectively. It is spacious enough to accommodate most of the wiring, ensuring everything remains well-organized and accessible for easy maintenance and troubleshooting.
@@ -122,34 +123,52 @@ The electronics table offers ample space for organizing wiring effectively. It i
 
 ![Untitled design (23)](https://github.com/user-attachments/assets/2b114052-4044-4fd0-98a4-c4719d0c3e10)
 
+![Untitled design (31)](https://github.com/user-attachments/assets/374ca9be-4cd0-41f4-9cbe-0662ce5149e8)
 
-The top plate is the strongest and most robust part of the robot, serving as its backbone. It plays a vital role in every subsystem, providing structural integrity and supporting the entire design.
+
+The top plate is the strongest and most robust part of the robot, serving as its backbone. 
+
+It plays a vital role in every subsystem, providing structural integrity and supporting the entire design.
 
 **Bottom Plate**
 
 ![Untitled design (24)](https://github.com/user-attachments/assets/9a76d7ae-a4c2-43fb-8ad1-1b5610d95315)
 
+![Untitled design (30)](https://github.com/user-attachments/assets/6fa425bc-fd75-4b9b-a691-30875230e236)
+
+
 The bottom plate provides essential support and serves as a key aesthetic feature for the robot. It protects the belly of the robot from potential damage while also adding significant structural integrity to the overall foundation. By ensuring a strong base, the bottom plate helps maintain the robot's durability and stability during operation. Its role in reinforcing the lower framework makes it a critical component of the robot's design.
 
 **Bevel Gears**  
 
+![Untitled design (25)](https://github.com/user-attachments/assets/82238a56-f46d-4b0a-8b3a-da0ba399a555)
+
+![Untitled design (32)](https://github.com/user-attachments/assets/43d820ab-0fa4-4fe2-bbcb-ebc4e06b26f3)
 
 
 The bevel gears are designed for durability, featuring a large diameter and sizable teeth. This design ensures they wear out more slowly, making them reliable and long-lasting components of the drive system.
 
 **Motor Bracket**  
 
+![Untitled design (26)](https://github.com/user-attachments/assets/b5ad1521-8ca4-4adb-aee0-2f33dcd7c8aa)
 
+![Untitled design (33)](https://github.com/user-attachments/assets/b0957af5-fd1d-42b0-8536-dfd578967b24)
 
-The motor bracket is small and simple in design, effectively performing its function without occupying excessive space. It optimizes space utilization while ensuring the motor is securely mounted.
+The motor bracket is small and simple in design, effectively performing its function without occupying excessive space. 
+It optimizes space utilization while ensuring the motor is securely mounted.
 
 **Camera Mount**  
+
+![Untitled design (28)](https://github.com/user-attachments/assets/2788b94f-cce0-4507-904c-f9b6ee310ce2)
 
 
 The camera mount is tall and adjustable, providing flexibility in positioning without taking up much flat space on the electronics table. It offers several customization options to fit various configurations as needed.
 
 **Steering System**  
 
+![Untitled design (27)](https://github.com/user-attachments/assets/10a2ad7f-63c1-40f5-80e1-b68228a2e334)
+
+![Untitled design (34)](https://github.com/user-attachments/assets/a2025f5d-8f8d-4129-9199-837189ffacf2)
 
 
 The steering system is compact and straightforward, featuring a linkage-based design. It allows for the maximum possible steering angle and is highly reliable, ensuring excellent maneuverability and performance.
@@ -338,16 +357,24 @@ If we had more time, we would likely explore a more complex design that branches
 
 **RaspberryPi 4B**
 
+![Untitled design (35)](https://github.com/user-attachments/assets/b268cea5-e015-4d46-8e09-3f54ef0ec3e7)
+
+
 - With its quad-core ARM Cortex-A72 64-bit 1.5GHz processor and 8GB RAM it meant that we would never face a computationl bottleneck, even with the heavy task of image processing in the obstacle         challenge.
 - Its ability to be programmed and controlled wirelessly was a boon during the testing and debugging phase as we could run the robot almost continuously without having to detach and reattach            the cable for uploading code.
 - Its extensive use and testing was the reason we chose to go with the RaspberryPi 4B instead of the newer RaspberryPi 5. If there was ever an issue we faced, it could most likely be solved by          searching up the problem.
 
 **RaspberryPi Camera Module 3 with Wide Angle lens**
 
+![Untitled design (36)](https://github.com/user-attachments/assets/f20e7c32-37de-47a2-938a-2b0732e7ff77)
+
+
 - We chose this mainly for its ease of integration and compatability with the RaspberryPi. 
 - Its wide FOV (120 degrees), high resolution(12 megapixels), autofocus feature and ability to sense color in a wide range of lighting conditions allowed for efficent obstacle detection and             sensing from varying distances and angles even while moving at high speeds
 
 **Arduino Nano**
+
+
 
 - The use of the Arduino Nano in our robot is solely to gather data from the ultrasonic sensors and relay it to the RaspberryPi. 
 - Hence its compactness and low power consumption was the main reason we chose to use it.
