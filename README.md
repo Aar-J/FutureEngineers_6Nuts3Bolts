@@ -1,4 +1,4 @@
-![Untitled design (11)](https://github.com/user-attachments/assets/6f62a1ab-ac59-4301-bdf5-77ba615ff212)<img width="440" alt="Screenshot 2024-10-04 at 12 01 18 PM" src="https://github.com/user-attachments/assets/2903a279-c365-4ecb-95fb-43c1fa0d8bc7"># Welcome to our GitHub!
+# Welcome to our GitHub!
 
 # Introduction
 We are team 6Nuts3Bolts, a dynamic trio of passionate robotics enthusiasts. 
@@ -401,7 +401,8 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 **RevRobotics NEO550**
 
-![Untitled design (9)](https://github.com/user-attachments/assets/5aaae47c-9e4e-4e74-bcd5-954adc0242c3)
+![Untitled design (15)](https://github.com/user-attachments/assets/26456897-bea2-4da2-b72c-7a1d0638b2f2)
+
 
 - It has an absolutely phenomenal power to weight ratio (weighing only 140grams) as well as very high acceleration and has a free running speed of upto 11000 RPM. We have geared it in a 5:1             ratio. 
 - We had previously used this motor in FRC (FIRST Robotics Competition) and hence were comfortable operating with it.
@@ -416,8 +417,7 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 **HC-SRO4 Ultrasonic Sensors**
 
-![Untitled design (12)](https://github.com/user-attachments/assets/67a69d7a-b94d-47c2-b5a8-9b72049f36e1)
-
+![Untitled design (14)](https://github.com/user-attachments/assets/da329699-54ac-43f2-8ef8-96a696106bcb)
 - These are widely available and a popular choice of sensor although sometimes they may be unreliable, with good programming they can be made to work just fine. 
 - There are many resources and libraries available online to control these effectively making both programming and troubleshooting easy to do.
 - Their accuracy is reasonable, able to provide output within a 2-3mm range of error and are also able to maintain consistency at moderate speeds, providing data every 30ms.
