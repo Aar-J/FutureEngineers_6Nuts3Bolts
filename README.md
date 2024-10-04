@@ -4,16 +4,19 @@
 We are team 6Nuts3Bolts, a dynamic trio of passionate robotics enthusiasts. 
 Based off of the nature of the task, we divded the industry and each took on a key aspect of the challenge.
 
-**Arham**: 
+**Arham**: He is in charge of the electronic systems as well as the documentation.
 
-**Shauryaveer**:
+**Shauryaveer**: He is our main designer and constructor and worked on the car's mechanisms
 
-**Ranveer**:
+**Ranveer**: He is our programming lead, in responsible for all the code and processing on our robot.
+
+Team Photo.
 
 # Table of Contents
 Car photos
 
 Our Engineering Process
+
 - Fundamental Parameters
 - Mobility Management
   - Explanation
@@ -528,7 +531,7 @@ In this sections first we will first discuss how we solved the obstacle challeng
   
 ### Explanation
 
-**Obstacle Challenge**
+#### **Obstacle Challenge**
 
 First we begin by importing all the libraries
 
@@ -845,7 +848,13 @@ Lastly we have the stopping procedures
 
   This is how we solved the Obstacle Challenge.
 
-**Open Round**
+#### **Open Round**
+
+
+**Logic Flowchart**
+  
+![algorithm_flowchart](https://github.com/user-attachments/assets/f694ea93-8fb8-4353-9f17-779f5dc22ccb)
+
 
 The setup of the libraries and pins and communication protocils for the Journey Right and Left programs is the same as the obstacle challenge, minus a few hence, explaining that once again would be redundancy.
 
@@ -968,9 +977,6 @@ Lastly we have the straight movement case.
   
 - Servo Control: The pid function is called to calculate the pulse width for steering correction.
 
-Logic Flowchart
-  
-![algorithm_flowchart](https://github.com/user-attachments/assets/f694ea93-8fb8-4353-9f17-779f5dc22ccb)
 
 
 
