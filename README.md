@@ -457,17 +457,27 @@ If we had more time, we would likely explore a more complex design that branches
 
 **Version 1**
 
-This was a prototyping version, simply to test the circuit and have a robot capable of moving while we worked on a better version.
+This was a prototyping version, simply to test the circuit and have a robot capable of moving while we worked on a better one. This was for version 1 of the design.
 It consisted of the Electronics mounted on a cardboard plate and the use of a prototyping board fundamentally composed on 4 buck converters. There were wires going everywhere, even outisde the perimeter of our bot. However, this was only ever meant to be a prototyping version. 
 
 ![Carboard Plate (1)](https://github.com/user-attachments/assets/1c7484e9-9b19-4533-9836-e13fd27eb4cd)
 
 **Version 2**
-This was also merely a prototyping version intended on having a functional robot to program. The differe
+This was also merely a prototyping version intended on having a functional robot to program. The difference between Version 1 and 2 is solely the cleanliness of the mounting and the organization of wires. This was mostly in place during versions 2 and 3 of our desgn
 
-![More well positioned Cardboard Plate](https://github.com/user-attachments/assets/200de56e-0422-4285-8648-1b30d4dbfae6)
+The Crius power distribution board was a cool piece, however it was ultimately redundant. It consumed space, as well as had excess ports which we had no use for. Hence it was discarded. 
+The fuse we were using had a rating of 15A. Our circuit will never draw more than 4A hence this was also unnecessary.
+The cardboard plate mounting although humble, actually surprised us as it turned out to be quite solid and reliable. However we  knew that having a proper circuit board would yet be a better decision.
 
+![More well positioned Cardboard Plate (1)](https://github.com/user-attachments/assets/ea1ce81d-7ed0-4176-bc49-50e5ac20a495)
 
+**Version 3**
+
+![Untitled design (54)](https://github.com/user-attachments/assets/d6f0061f-cdfd-4a3c-a2c3-5f9241d964f6)
+
+We were always planning on soldering all the components onto one single board for the final iteration of our robot, however due to changes in components as well as troubleshooting, we waited till all our systems were finalised before making our circuit board. This is what we used for version 4(final) of our design
+
+This is (at leat for nationals) the final iteration of the electrical systems of our robot. It is a significantly improved version and has all the electronics mounted on a general purpose board. It provides a clean and professional look to our robot and also minimises wiring mistakes as well as chances of shorts. 
 
 ### **How we achieved Clean and Organized wiring**
 
@@ -533,8 +543,8 @@ We also used crimp connectors for the switch, such that we could quickly remove 
 
 - We plan on using PCB Design software to create a circuit design and then have that PCB printed and manufactured. This will almost completely eliminate     small wired connections and chance of circuit failure.
 - We also plan on swapping out the HC-SR04 Ultrasonic sensors with faster and more reliable ones like the URM09 or SEN001.
-- We may also swap out the RaspberryPi for a faster controller like the Jetson Nano
-- 
+- We may also swap out the RaspberryPi for a more powerful controller like the Jetson Nano
+
 
 
 ### Electrical Components list:
