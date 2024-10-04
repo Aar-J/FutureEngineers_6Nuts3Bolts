@@ -340,14 +340,14 @@ If we had more time, we would likely explore a more complex design that branches
 - **Motor Bracket**
 - **Electronics Mount**
 - **Camera Mount**
-- **1 x Servo horn**
-- **20 x m3 10mm bolts**
-- **2 x m3 30mm bolts**
-- **16 x m3 nyloc nuts**
-- **1 x 75mm shaft**
-- **1 x 20mm shaft**
-- **2 x shaft collars**
-- **4 x 60mm rev wheels**
+- **1 x Servo horn** (comes with servo)
+- **20 x m3 10mm bolts** https://robokits.co.in/robot-parts/nut-bolts-standoffs/allen-cap-socket-head-bolts/m3-x-10-mm-socket-head-cap-stainless-steel-304-bolt-moq-15-pcs
+- **2 x m3 30mm bolts** https://robokits.co.in/robot-parts/nut-bolts-standoffs/allen-cap-socket-head-bolts/m3-x-30-mm-socket-head-cap-stainless-steel-304-bolt-moq-15-pcs
+- **16 x m3 nyloc nuts** https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m3-nyloc-nuts-304-stainless-steel-moq-25-pcs
+- **1 x 90mm shaft** https://www.revrobotics.com/5mm-Hex-Shafts/#REV-41-1348-PK4
+- **1 x 20mm shaft** (can be cut from longer shaft)
+- **2 x shaft collars** https://www.revrobotics.com/rev-41-1327-pk10/
+- **4 x 60mm rev wheels** https://www.revrobotics.com/DUO-Traction-Wheels/#REV-41-1350-PK4
 
 ## **Power and sense management**
 
