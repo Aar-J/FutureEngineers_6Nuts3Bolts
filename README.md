@@ -498,8 +498,6 @@ In this sections first we will first discuss how we solved the obstacle challeng
 
 **Obstacle Challenge**
 
-**Open Round**
-
 First we begin by importing all the libraries
 
 <img width="286" alt="Screenshot 2024-10-04 at 10 26 26 AM" src="https://github.com/user-attachments/assets/9b523ad5-e819-4962-b974-f98ca9a56ad3">
@@ -543,7 +541,7 @@ sys.path.append('/usr/lib/python3/dist-packages')
 
 <img width="321" alt="Screenshot 2024-10-04 at 10 28 35 AM" src="https://github.com/user-attachments/assets/63cf3fcf-23eb-4e27-89a3-3b8103e7e66c">
   
-import pigpio  # Library for controlling GPIO pins (for PWM/servo control)
+import pigpio   
 - The RaspberryPi's software PWM signal is often unstable and unreliable. The pigpio library solves this issue generation a hardware PWM on the the         
   RaspberryPi.
 
@@ -559,15 +557,29 @@ import cv2
 - Here we are importing OpenCV for camera processing and display. This handles all of the vision processing.
 
   
-<img width="531" alt="Screenshot 2024-10-04 at 10 29 41 AM" src="https://github.com/user-attachments/assets/289d4a76-48d5-4726-9f7c-3b43684cac31">
+<img width="187" alt="Screenshot 2024-10-04 at 12 44 34 PM" src="https://github.com/user-attachments/assets/17519582-7ef7-4c5b-8705-b1d725810680">
 
-import JourneyLeft as l  # Custom module to handle left-side journey logic
-import JourneyRight as r  # Custom module to handle right-side journey logic
-- These are the Journeys we made for either running the robot clockwise or counterclockwise. Their explanation is just after.
+import numpy as np
+- Here we import NumPy for numerical operations using it in conjunction with OpenCV for image data processing.
+
+<img width="254" alt="Screenshot 2024-10-04 at 12 45 28 PM" src="https://github.com/user-attachments/assets/2696f684-fe59-4bfb-a302-ae6361609c2b">
+
+import Blue_detected as b1
+- This is a custom module containing functions for color detection.
 
 
-Next we set up all the communication protocols. 
+Next we set up all the communication protocols, declare all the control variables in our program and initialise the necessary objects. 
+We will use these to build our logic.
 
+<img width="1134" alt="Screenshot 2024-10-04 at 12 49 01 PM" src="https://github.com/user-attachments/assets/db2cf8f7-8dae-430b-91ab-9edfce9b775e">
+
+- We create a Picamera2 object to handle camera operations.
+  
+- The video configuration is set to a resolution of 640x480 pixels, with a frame duration limit of 33.33 milliseconds, which corresponds to 30 frames per second.
+  
+- The camera is then started, preparing it to capture images.
+
+  
 
 <img width="374" alt="Screenshot 2024-10-04 at 10 33 41 AM" src="https://github.com/user-attachments/assets/f6dd3423-100d-4e37-b27d-4e9919f3cc1a">
 
@@ -601,8 +613,6 @@ ser = serial.Serial('/dev/ttyACM0', 9600)
 sensor = adafruit_bno055.BNO055_I2C(i2c)  
 - Initializing the BNO055 sensor using I2C
 
-Now we declare all the control variables in our program. We will use these to build our logic.
-
 <img width="332" alt="Screenshot 2024-10-04 at 10 40 31 AM" src="https://github.com/user-attachments/assets/01ed42a0-ed34-4857-846a-040699c12ea5">
 
 heading = 0.0   
@@ -613,7 +623,7 @@ heading = 0.0
 dis = 0.0  
 - To store the distance from the left sensor
   
- <img width="280" alt="Screenshot 2024-10-04 at 10 41 05 AM" src="https://github.com/user-attachments/assets/716f0033-f278-442e-aa35-e1185f693b73">
+<img width="280" alt="Screenshot 2024-10-04 at 10 41 05 AM" src="https://github.com/user-attachments/assets/716f0033-f278-442e-aa35-e1185f693b73">
  
 value = 360 
 - Value to control servo/motor position
@@ -623,16 +633,21 @@ value = 360
 count = 0  
 - A counter to count number of loop iterations
 
+<img width="280" alt="Screenshot 2024-10-04 at 12 52 11 PM" src="https://github.com/user-attachments/assets/6d06f373-0de9-44b9-a6ea-5dc517a26d0a">
+
+arR = arG = yy = xg = xr = 0
+- These are variables for color detection areas.
+
+<img width="169" alt="Screenshot 2024-10-04 at 12 56 35 PM" src="https://github.com/user-attachments/assets/c233dac5-5ccc-4420-905b-4e074948dde1">
+
+orange = False
+- Flag variable for if orange color is detected.
+
 <img width="407" alt="Screenshot 2024-10-04 at 10 42 12 AM" src="https://github.com/user-attachments/assets/e6afde50-60e3-4bdb-920e-3bc3ed46e21b">
 
 increment = False  
 - Flag for controlling incremental behavior
 
-
-<img width="300" alt="Screenshot 2024-10-04 at 10 42 29 AM" src="https://github.com/user-attachments/assets/5c39fcd2-ea6d-4bd4-aa2b-2af77a657878">
-
-logic = False  
-- Flag variable for decision logic, to decide whether to run left journey or right journey
 
   
 <img width="265" alt="Screenshot 2024-10-04 at 10 42 44 AM" src="https://github.com/user-attachments/assets/9b53b124-32ec-4668-8d55-b86a3b865432">
@@ -640,11 +655,181 @@ logic = False
 flag = True  
 - Flag variable to track state
 
+
   
 <img width="276" alt="Screenshot 2024-10-04 at 10 43 01 AM" src="https://github.com/user-attachments/assets/ba531017-740c-4ef8-a204-986112c10f6c">
 
 init = True  
 - Flag variable to track initialization state
+
+PID Controller
+
+Here we initialise our PID function
+
+<img width="232" alt="Screenshot 2024-10-04 at 11 54 26 AM" src="https://github.com/user-attachments/assets/222e70d4-4253-4bd9-986b-fc262bc11dfa">
+
+The input parameters for the PID Controller are :
+
+**y** 
+- This is the target heading or the direction you want the robot to face.
+  
+**heading** 
+- This stores the current heading of the robot, i.e., the direction the robot is currently facing, measured by the BNO055 sensor.
+  
+**kP**
+- This represents the proportional constant used to determine how much correction to apply based on the error. The higher the constant, the more   
+  aggressively the robot will correct its heading.
+  
+<img width="254" alt="Screenshot 2024-10-04 at 11 55 24 AM" src="https://github.com/user-attachments/assets/f34ac108-5ead-4c7c-9661-5fbef5adf656">
+
+Here we normalize our "y" or target heading.
+- This part ensures y is normalized within the range of -180 to 180 degrees.
+  
+- The idea is to convert the heading into a more manageable format that can be used for comparison and calculation.
+  
+- If y is less than 360 - y, it remains unchanged.
+  
+- If y == 360 - y, meaning it’s exactly opposite (180 degrees), it's set to 180 degrees.
+  
+- Otherwise, it subtracts y from 360, effectively flipping it to the opposite direction.
+
+  <img width="300" alt="Screenshot 2024-10-04 at 11 57 05 AM" src="https://github.com/user-attachments/assets/9a7a47d5-0a5e-494e-a163-3af0ad753024">
+
+Similarly, this block normalises our current heading.
+
+In this block, we calculate our error.
+
+<img width="291" alt="Screenshot 2024-10-04 at 11 59 03 AM" src="https://github.com/user-attachments/assets/3f4c3e00-2fa1-4119-820d-e97cc7df237e">
+
+- Error is the difference between the current heading and the target heading.
+  
+- This error is used to determine how much the robot needs to adjust its steering to correct its path.
+  
+- There are three conditions:
+  
+  - Both headings are negative: The error is simply the difference between heading and y.
+  - Heading is negative, but the target is positive: The error is the sum of y and heading.
+  - In all other cases: The error is calculated as the difference between heading and y.
+ 
+
+Based off this, we calculate our turn value and return it.
+
+<img width="440" alt="Screenshot 2024-10-04 at 12 01 44 PM" src="https://github.com/user-attachments/assets/bd820241-a43c-4d82-b3b9-2aeb9c8c6f91">
+
+
+- This line calculates the servo pulse width for the robot’s steering servo based on the error.
+
+- The idea is to adjust the robot’s steering proportionally to the error, which means the bigger the error, the bigger the correction.
+
+- The formula is: 1200 - error * kP, where 1200 is the neutral position (centered steering), and error * kP is the correction based on how far off the 
+  heading is.
+
+- To prevent extreme values, the min and max functions are used to clamp the output between 800 and 1600. These limits ensure that the servo doesn’t exceed 
+  its physical range
+
+
+This is the main control loop for image capture and processing.
+
+<img width="1002" alt="Screenshot 2024-10-04 at 12 57 52 PM" src="https://github.com/user-attachments/assets/7aa072e8-2987-4bd3-a304-0a673850cbda">
+
+Image Capture:
+
+- The camera captures an image array into img.
+
+
+Image Processing:
+
+- Color Conversion: The image is converted from BGR to RGB format for compatibility with the OpenCV functions.
+  
+- Color Detection: The program calls color detection functions from the Blue_detected module:
+  
+- red_detect(img): Detects red areas in the image and returns the image with markings, along with the area (arR), and coordinates (xr, yr).
+  
+- green_detect(img): Similar function for detecting green areas.
+  
+- color_detect(img, lower, upper, "blue"): Detects blue areas with specified lower and upper color thresholds.
+  
+- A second call to color_detect is used to detect orange areas, with specific HSV values.
+
+  
+Display:
+
+- A white rectangle is drawn on the top part of the image frame for visual guidance, and the processed image is displayed in a window titled “frame.”
+
+In this block, we retrieve sensor data.
+
+<img width="666" alt="Screenshot 2024-10-04 at 1 02 28 PM" src="https://github.com/user-attachments/assets/e1224380-c979-4763-bae6-287a753d728d">
+
+- The robot finds its current heading, roll, and pitch from the BNO055 sensor's Euler angles.
+  
+- The heading is clamped to ensure it stays within the range of 0 to 360 degrees.
+  
+Distance Measurement:
+
+- The program reads a line from the serial port, decoding it to a string. It expects distance data in a comma-separated format.
+  
+- The data is split into two float values, representing distance measurements (dis for one side and distanceRight for another side).
+  
+- If reading fails, both distance values are defaulted to 0.
+
+This block contains the color processing logic.
+
+<img width="339" alt="Screenshot 2024-10-04 at 1 04 45 PM" src="https://github.com/user-attachments/assets/bbbfc726-744d-4cfd-a595-bec4447ffe9a">
+
+- The code checks the areas of detected colors:
+  
+- If the detected area for blue (yy) is between 100 and 250, it sets the flag blue1 to True.
+  
+- If yy exceeds 340, it sets another flag blue2 to True.
+  
+- The robot checks if both blue flags are set and if an orange area (yy2) is detected. If so, it sets the orange flag to True, indicating that it can 
+  respond to the orange color.
+
+Next we have the Servo control logic.
+
+<img width="800" alt="Screenshot 2024-10-04 at 1 06 04 PM" src="https://github.com/user-attachments/assets/6ede5506-da72-4b9f-98ff-5ff0680117f8">
+
+- If a significant red (arR) or green (arG) area is detected (both with area thresholds), it sets the flag to True and resets orange to False.
+  
+- If the orange flag is set and the distance (dis) is greater than 15, it executes specific logic for turning towards orange.
+  
+Default Case:
+
+- If no significant colors are detected, it defaults to adjusting the servo's pulse width using the PID control function.
+  
+- If increment is True, it increments the count and resets the increment flag, allowing for controlled execution across multiple iterations.
+
+Lastly we have the stopping procedures
+
+<img width="307" alt="Screenshot 2024-10-04 at 1 10 49 PM" src="https://github.com/user-attachments/assets/c61ab59a-57af-469e-9c98-351cd4e081b8">
+
+- This stops all active servo and motor operations by setting their pulse width to 0, effectively disabling them.
+  
+- All OpenCV windows are closed to free up resources.
+  
+- The camera is stopped, ensuring it is no longer capturing or processing images.
+  
+- The pigpio connection is released, completing the stopping process.
+
+  This is how we solved the Obstacle Challenge.
+
+**Open Round**
+
+The setup of the libraries and pins and communication protocils for the Journey Right and Left programs is the same as the obstacle challenge, minus a few hence, explaining that once again would be redundancy.
+
+
+Only the left and right journey programs need to be imported here seperately.
+
+<img width="531" alt="Screenshot 2024-10-04 at 10 29 41 AM" src="https://github.com/user-attachments/assets/289d4a76-48d5-4726-9f7c-3b43684cac31">
+
+import JourneyLeft as l  # Custom module to handle left-side journey logic
+import JourneyRight as r  # Custom module to handle right-side journey logic
+- These are the Journeys we made for either running the robot clockwise or counterclockwise. Their explanation is just after.
+
+<img width="300" alt="Screenshot 2024-10-04 at 10 42 29 AM" src="https://github.com/user-attachments/assets/5c39fcd2-ea6d-4bd4-aa2b-2af77a657878">
+
+logic = False  
+- Flag variable for decision logic, to decide whether to run left journey or right journey
 
 
 <img width="207" alt="Screenshot 2024-10-04 at 10 43 18 AM" src="https://github.com/user-attachments/assets/c8836b31-5e56-44e1-836d-2e129c2c44da">
@@ -714,72 +899,6 @@ Final actions after the loop:
 Here's an explanation of the journey logic explained using the example of the Journey Right program.
 
 The setup of the libraries and pins for the Journey Right and Left programs is the same hence, explaining that once again would be redundancy.
-
-PID Controller
-
-Here we initialise our PID function
-
-<img width="232" alt="Screenshot 2024-10-04 at 11 54 26 AM" src="https://github.com/user-attachments/assets/222e70d4-4253-4bd9-986b-fc262bc11dfa">
-
-The input parameters for the PID Controller are :
-
-**y** 
-- This is the target heading or the direction you want the robot to face.
-  
-**heading** 
-- This stores the current heading of the robot, i.e., the direction the robot is currently facing, measured by the BNO055 sensor.
-  
-**kP**
-- This represents the proportional constant used to determine how much correction to apply based on the error. The higher the constant, the more   
-  aggressively the robot will correct its heading.
-  
-<img width="254" alt="Screenshot 2024-10-04 at 11 55 24 AM" src="https://github.com/user-attachments/assets/f34ac108-5ead-4c7c-9661-5fbef5adf656">
-
-Here we normalize our "y" or target heading.
-- This part ensures y is normalized within the range of -180 to 180 degrees.
-  
-- The idea is to convert the heading into a more manageable format that can be used for comparison and calculation.
-  
-- If y is less than 360 - y, it remains unchanged.
-  
-- If y == 360 - y, meaning it’s exactly opposite (180 degrees), it's set to 180 degrees.
-  
-- Otherwise, it subtracts y from 360, effectively flipping it to the opposite direction.
-
-  <img width="300" alt="Screenshot 2024-10-04 at 11 57 05 AM" src="https://github.com/user-attachments/assets/9a7a47d5-0a5e-494e-a163-3af0ad753024">
-
-Similarly, this block normalises our current heading.
-
-In this block, we calculate our error.
-
-<img width="291" alt="Screenshot 2024-10-04 at 11 59 03 AM" src="https://github.com/user-attachments/assets/3f4c3e00-2fa1-4119-820d-e97cc7df237e">
-
-- Error is the difference between the current heading and the target heading.
-  
-- This error is used to determine how much the robot needs to adjust its steering to correct its path.
-  
-- There are three conditions:
-  
-  - Both headings are negative: The error is simply the difference between heading and y.
-  - Heading is negative, but the target is positive: The error is the sum of y and heading.
-  - In all other cases: The error is calculated as the difference between heading and y.
- 
-
-Based off this, we calculate our turn value and return it.
-
-<img width="440" alt="Screenshot 2024-10-04 at 12 01 44 PM" src="https://github.com/user-attachments/assets/bd820241-a43c-4d82-b3b9-2aeb9c8c6f91">
-
-
-- This line calculates the servo pulse width for the robot’s steering servo based on the error.
-
-- The idea is to adjust the robot’s steering proportionally to the error, which means the bigger the error, the bigger the correction.
-
-- The formula is: 1200 - error * kP, where 1200 is the neutral position (centered steering), and error * kP is the correction based on how far off the 
-  heading is.
-
-- To prevent extreme values, the min and max functions are used to clamp the output between 800 and 1600. These limits ensure that the servo doesn’t exceed 
-  its physical range
-
 
 Finally, this is the R_Journey function
 
