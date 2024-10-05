@@ -344,6 +344,9 @@ Overall, this design marked the culmination of all our ideas and refinements, ma
 
 **How we made it Compact**
 
+![More well positioned Cardboard Plate (3)](https://github.com/user-attachments/assets/ef4913a2-95ea-454b-a44a-bd19fe2a9c51)
+
+
 We began by visualizing how all the components could fit closely together, and we built around that idea. The space between parts is minimal, but we made sure it wouldn’t create any issues in performance or accessibility.
 The overall length of the robot is limited by key components like the NEO 550 motor, bevel gears, and the steering system, while the width is determined by the size of the Spark MAX, ultrasonic sensor, servo, and battery. By carefully balancing the length and width, we were able to create a robot that is compact yet fully functional. The width isn't constrained by any specific part, it’s simply as wide as necessary to accommodate the essential components.
 
@@ -525,7 +528,8 @@ Wago connectors were used for connections between the SparkMax and Neo ensuring 
     
 ### **How we made it convenient to assemble and dissasemble**
 
-![Untitled design (52)](https://github.com/user-attachments/assets/28462c28-3486-4077-a786-49edd870639d)
+![Untitled design (61)](https://github.com/user-attachments/assets/f907a0bd-d16c-41d5-89d5-2f4bb2c3b255)
+
 
 
 Ease of maintainence and assembly was another top priority. 
