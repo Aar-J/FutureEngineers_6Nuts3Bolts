@@ -12,7 +12,6 @@ import cv2
 import numpy as np
 import Blue_detected as b1
 
-
 def pid(y, heading, kP):
     # Calculate the error between desired heading (y) and current heading
     if y < 360 - y:
@@ -36,14 +35,13 @@ def pid(y, heading, kP):
     else:
         error = heading - y
 
-    turn = min(2000, max(1000, 1500 - error * kP))  # Calculate turn value
+    # Calculate turn value based on the error and return it
+    turn = min(2000, max(1000, 1500 - error * kP))
     return turn
 
 def main(picam2, pi, sensor):
-    heading = 0.0
-    roll = 0.0
-    pitch = 0.0
-    dis = 0.0
+    # Initialize variables
+    heading = roll = pitch = dis = 0.0
     value = 360
     count = 0
     arR = arG = yy = xg = xr = 0
@@ -59,13 +57,14 @@ def main(picam2, pi, sensor):
     redAfterTurn = False
     s_time = 0
 
+    # Main loop to capture images and control the servo
     while count < 3:
         # Capture image from the camera
         img = picam2.capture_array()
         img1 = img2 = img3 = img
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # Convert image to RGB
         
-        # Define color detection thresholds
+        # Define color detection thresholds for red, green, and blue
         lower = (100, 70, 40)
         upper = (145, 255, 175)
 
@@ -211,29 +210,29 @@ def main(picam2, pi, sensor):
         pi.set_servo_pulsewidth(13, 1550)  # Control another servo
 
         # Check for keyboard input
-key = cv2.waitKey(1)
-# Exit loop if 'q' is pressed or if a specific key is detected
-if key == 1 or key == ord('q'):
-    break
+        key = cv2.waitKey(1)
+        # Exit loop if 'q' is pressed
+        if key == 1 or key == ord('q'):
+            break
 
-# Set servo pulse width for parking maneuver based on PID controller output
-pi.set_servo_pulsewidth(18, pid(value, heading, 30))
-# Introduce a short delay to allow for stabilization
-time.sleep(0.2)
+    # Set servo pulse width for parking maneuver based on PID controller output
+    pi.set_servo_pulsewidth(18, pid(value, heading, 30))
+    # Introduce a short delay to allow for stabilization
+    time.sleep(0.2)
 
-# Indicate that the parking process is starting
-print("Parking")
+    # Indicate that the parking process is starting
+    print("Parking")
 
-# Execute the parking routine from the parking module
-P.main(pi, picam2, sensor, invert)
+    # Execute the parking routine from the parking module
+    P.main(pi, picam2, sensor, invert)
 
-# Reset servo positions to zero after parking
-pi.set_servo_pulsewidth(13, 0)
-pi.set_servo_pulsewidth(18, 0)
+    # Reset servo positions to zero after parking
+    pi.set_servo_pulsewidth(13, 0)
+    pi.set_servo_pulsewidth(18, 0)
 
-# Clean up by closing all OpenCV windows
-cv2.destroyAllWindows()
+    # Clean up by closing all OpenCV windows
+    cv2.destroyAllWindows()
 
-# Stop the camera and clean up the GPIO
-picam2.stop()
-pi.stop()
+    # Stop the camera and clean up the GPIO
+    picam2.stop()
+    pi.stop()
