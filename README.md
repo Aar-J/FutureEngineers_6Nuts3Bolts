@@ -502,6 +502,8 @@ This is (at leat for nationals) the final iteration of the electrical systems of
 
 To keep our wiring system easy to manage, we focused on clarity, organization and structure in all connections.
 
+![More well positioned Cardboard Plate (4)](https://github.com/user-attachments/assets/d2061dae-c125-43de-80ae-6d4d56531959)
+
 We used solid core wire for connections since they can be bent into shape making wiring neat and easy to solder.
 We soldered all wire connections and mounted them on a general purpose board providing a solid foundation for the wiring, minimizing loose wires and clutter.
 Every wire was labeled and color-coded, making it simple to track individual connections. This helped ensure quick identification of components during assembly and troubleshooting.
@@ -636,9 +638,9 @@ In this sections first we will first discuss how we solved the obstacle challeng
 
 ### How we achieved our target
 
-- f
-- f
-- f
+- We started with a simple logic consisting of an if else ladder to maneuver right around red and left around a green block and to take turn when it detected a line. This logic at the core kept the code simple and flexible
+- We mostly focused on our detection logic ensuring our robot would be able to detect the obstacles and make the correct decisions even at high speeds
+- We realised the key to solving the challenge lay primarily in repetitive testing and updating the code handling all the edge cases that came our way. 
 
   
 ### Explanation
