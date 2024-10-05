@@ -636,11 +636,6 @@ https://robu.in/product/mc002076-terminal-block-barrier-3pos/
 ## **Obstacle management**
 In this sections first we will first discuss how we solved the obstacle challenge and then move onto the  solution for the open round challenge as well as a general explanation of our software and logic flow.
 
-### How we achieved our target
-
-- We started with a simple logic consisting of an if else ladder to maneuver right around red and left around a green block and to take turn when it detected a line. This logic at the core kept the code simple and flexible
-- We mostly focused on our detection logic ensuring our robot would be able to detect the obstacles and make the correct decisions even at high speeds
-- We realised the key to solving the challenge lay primarily in repetitive testing and updating the code handling all the edge cases that came our way. 
 
   
 ### Explanation
@@ -1091,7 +1086,11 @@ Lastly we have the straight movement case.
   
 - Servo Control: The pid function is called to calculate the pulse width for steering correction.
 
+### How we achieved our target
 
+- We started with a simple logic consisting of an if else ladder to maneuver right around red and left around a green block and to take turn when it detected a line. This logic at the core kept the code simple and flexible
+- We mostly focused on our detection logic ensuring our robot would be able to detect the obstacles and make the correct decisions even at high speeds
+- We realised the key to solving the challenge lay primarily in repetitive testing and updating the code handling all the edge cases that came our way. 
 
 
 ### Future improvements
