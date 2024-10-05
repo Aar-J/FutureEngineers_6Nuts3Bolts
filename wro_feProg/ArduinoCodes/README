@@ -1,0 +1,2 @@
+This contains the code for the ultrasonic sensors which are wired to the Arduino Nano.
+Their values are obtained on the serial monitor which is called in the OpenChallenge RaspberryPi code
