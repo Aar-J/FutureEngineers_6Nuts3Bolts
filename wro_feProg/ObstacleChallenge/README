@@ -1,0 +1,6 @@
+The ObstacleChallenge6N3B is the main Program for the Obstacle Challenge
+
+RightSideJourney is the program for taking 3 rounds turning right
+LeftSideJourney is the program for taking 3 rounds turning left
+
+Both are called in the main program which takes the decision of which to run
