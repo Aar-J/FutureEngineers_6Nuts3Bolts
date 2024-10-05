@@ -20,7 +20,7 @@ He is our main designer and constructor and worked on the car's mechanisms
 
 ![WhatsApp Image 2024-10-04 at 6 20 25 PM](https://github.com/user-attachments/assets/d438b62a-15f7-4e45-9bb9-086e6d58676f)
 
-He is our programming lead, in responsible for all the code and processing on our robot.
+He is our programming lead, and responsible for all the code and processing on our robot.
 
 **Team Photo**:
 
