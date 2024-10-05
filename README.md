@@ -33,6 +33,10 @@ He is our programming lead, and responsible for all the code and processing on o
 # Table of Contents
 Car photos
 
+Vehicle Videos
+- Open Round
+- Obstacle Round
+
 Our Engineering Process
 
 - Fundamental Parameters
@@ -87,6 +91,14 @@ Thank you to the judges
 ### Right Side
 
 ![Untitled design (47)](https://github.com/user-attachments/assets/c0efcff8-f4db-4bb3-a8db-db5ccc4c4576)
+
+
+# Vehicle Videos
+### Open Round
+https://www.youtube.com/watch?v=metChoJu9pQ
+
+### Obstacle challenge
+https://www.youtube.com/watch?v=metChoJu9pQ
 
 
 # Our Engineering Process
@@ -356,7 +368,7 @@ From the beginning, we adopted a mindset of keeping things simple. We've learned
 
 **How we made it Modular**
 
-The entire robot is based around three main plates, with each subassembly between them individually 3D printed. This modular design gives us a lot of flexibility. If something goes wrong with a specific part, we don’t need to overhaul the entire system—just swap out the problem area. It makes troubleshooting and maintenance much quicker and less stressful.
+The entire robot is based around three main plates, with each subassembly between them individually 3D printed. This modular design gives us a lot of flexibility. In case something goes wrong with a specific part, we don’t need to overhaul the entire system—just swap out the problem area. It makes troubleshooting and maintenance much quicker and less stressful.
 We designed the robot to be broken down into three key systems: the drive system, the steering system, and the electronics assembly. Any part that doesn’t fall into one of these categories is mostly there to provide structural integrity and support to the main components. For instance, the bottom plate doesn’t serve any critical function other than strengthening the overall structure. This modular approach ensures that our robot remains easy to work on, upgrade, and maintain, which is key for long-term reliability.
 
 
