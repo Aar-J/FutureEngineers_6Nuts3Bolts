@@ -331,12 +331,12 @@ Overall, this design marked the culmination of all our ideas and refinements, ma
 | **Motor Placement**           | Central for balance | Aligned with the length, bevel gears for 90-degree power transmission | Motor placement compromised for size | Same as v2, with more robust gearing system |
 | **Steering System**           | Approximate Ackermann, later switched to linkage-based | Linkage-based, powered by MG996R servo | Reduced turning angle due to compactness | Linkage-based with further steering modifications to reduce size |
 | **Electronics Layout**        | Spacious, simple arrangement on a general-purpose board | Layered design with three levels, hot-swappable electronics board | 5-6 layers proposed, overly complex, compact | Wider electronics table, no hot-swappable design due to durability issues |
-| **Camera System**             | Limelight camera, large and mounted high for optimal visibility |Limelight Camera Swapped for RaspberryPi Camera| Not specifically mentioned | Not specifically mentioned |
+| **Camera System**             | Limelight camera, large and mounted high for optimal visibility |Limelight Camera Swapped for RaspberryPi Camera| Same as v2, camera mount strengthened | Same as v3 |
 | **Frame Dimensions**          | Spacious, flexible for adjustments | Narrower (due to motor alignment) and more layered | Extremely compact (8.4 cm width), but overly complex | Reduced length, width unchanged; optimized overall dimensions |
 | **Gearbox**                   |20:1 UltraPlanetary gearbox |Same as v1 | Same as v2 | Switched to 5:1 UltraPlanetary gearbox for compactness and speed|
 | **Bevel Gears**               | Not used | 2 cm diameter, custom 3D-printed | Same as v2, but layering increased difficulty | 3 cm diameter, stronger, reduced wear and tear |
 | **Material Strength**         | Standard 3 mm plates | Standard 3 mm plates | Same as v2 | Plates increased from 3 mm to 4 mm for improved structural strength |
-| **Vibration Control**         | Not addressed | No differential system, resulting in vibrations | Not addressed | Reduced wheel gap to minimize vibrations during turns |
+| **Vibration Control**         | We discovered the vibration issues | No differential system, resulting in vibrations | Working on v4 since v3 was abandoned| Reduced wheel gap to minimize vibrations during turns |
 | **Testing and Feedback**      | Preliminary tests with bulky camera setup | Refined design with specific components, partial finalization | Abandoned due to complexity, compromised steering, and wiring issues | Final optimized version, most refined in terms of design and performance |
 | **Complexity**                | Simple and flexible | More complex but optimized for purpose | Extremely complex and impractical | Balanced complexity with practical refinements |
 
